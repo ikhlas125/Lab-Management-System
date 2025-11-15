@@ -1,0 +1,44 @@
+BasedOnStyle: Microsoft
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Put opening braces on the SAME LINE
+BreakBeforeBraces: Attach
+
+# Namespace indentation similar to VS
+IndentNamespaceContents: AfterExternBlock
+IndentExternBlock: AfterExternBlock
+
+# VS-style spacing
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInParentheses: false
+SpacesInAngles: false
+
+# Control statements formatting
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+
+# Pointer & reference binding style
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Switch/case formatting similar to VS
+IndentCaseLabels: false
+IndentCaseBlocks: true
+
+# Column width
+ColumnLimit: 120
+AllowShortBlocksOnASingleLine: false
+
+# Include sorting
+SortIncludes: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '.*'
+    Priority: 1
+
+Standard: Latest
