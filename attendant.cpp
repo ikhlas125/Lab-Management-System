@@ -5,5 +5,6 @@ Attendant::Attendant(const string& id, const string& name, const string& email, 
 
 void Attendant::displayInfo() const {
     cout << "Attendant Information:" << endl;
+    cout << "Attendant Id: " << AttendantId << endl;
     Person::displayInfo();
 }

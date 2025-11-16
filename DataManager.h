@@ -13,6 +13,7 @@ class DataManager {
     vector<Person> Persons;
     vector<TA> TeachingAssistants;
     vector<AcademicOfficer> AcademicOfficers;
+    vector<Attendant> Attendants;
 
   public:
     void loadPersons();
@@ -25,4 +26,5 @@ class DataManager {
     void printPersons() const;
     void printTAs() const;
     void printAcademicOfficers() const;
+    void printAttendants() const;
 };

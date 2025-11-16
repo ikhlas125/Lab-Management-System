@@ -121,7 +121,7 @@ void DataManager::loadAcademicOfficers() {
     }
 
     AcademicOfficerR* temp = new AcademicOfficerR[count];
-    file.read(reinterpret_cast<char*>(temp), sizeof(TeachingAssistant) * count);
+    file.read(reinterpret_cast<char*>(temp), sizeof(AcademicOfficerR) * count);
     if (!file) {
         cout << "Error: Could not read all Academic Officer records" << endl;
         delete[] temp;
@@ -139,7 +139,40 @@ void DataManager::loadAcademicOfficers() {
     cout << "Loaded " << AcademicOfficers.size() << " Academic Officer." << endl;
 }
 
-void DataManager::loadAttendants() {}
+void DataManager::loadAttendants() {
+    Attendants.clear();
+
+    ifstream file("attendants.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open attendants.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid attendants.bin format" << endl;
+        return;
+    }
+
+    AttendantR* temp = new AttendantR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(AttendantR) * count);
+    if (!file) {
+        cout << "Error: Could not read all Attendant records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    for (int i = 0; i < count; ++i) {
+        Person* tempo = searchByID(temp[i].personId);
+        Attendants.push_back(
+            Attendant(tempo->getId(), tempo->getName(), tempo->getEmail(), tempo->getPhone(), temp[i].attendantId));
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << Attendants.size() << " Academic Officer." << endl;
+}
 
 Person* DataManager::searchByID(const string& Id) {
     for (int i = 0; i < Persons.size(); i++) {
@@ -171,5 +204,11 @@ void DataManager::printTAs() const {
 void DataManager::printAcademicOfficers() const {
     for (const auto& a : AcademicOfficers) {
         a.displayInfo();
+    }
+}
+
+void DataManager::printAttendants() const {
+    for (const auto& l : Attendants) {
+        l.displayInfo();
     }
 }
