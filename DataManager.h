@@ -1,32 +1,11 @@
 #include "academicOfficer.h"
 #include "attendant.h"
+#include "helper.h"
 #include "instructor.h"
 #include "ta.h"
 #include <fstream>
 #include <iomanip>
 #include <vector>
-
-struct PersonRecord {
-    char id[10];
-    char name[50];
-    char email[50];
-    char phone[20];
-};
-
-struct InstructorRecord {
-    char instructorId[10];
-    char personId[10];
-};
-
-struct TeachingAssistant {
-    char taId[10];
-    char personId[10];
-};
-
-struct AcademicOfficerR {
-    char officerId[10];
-    char personId[10];
-};
 
 class DataManager {
   private:
@@ -172,8 +151,10 @@ class DataManager {
 
         delete[] temp;
         file.close();
-        cout << "Loaded " << Instructors.size() << " Academic Officer." << endl;
+        cout << "Loaded " << AcademicOfficers.size() << " Academic Officer." << endl;
     }
+
+    void loadAttendants() {}
 
     Person* searchByID(const string& Id) {
         for (int i = 0; i < Persons.size(); i++) {

@@ -2,15 +2,18 @@
 #include <iostream>
 using namespace std;
 
+class Attendant;
+
 class Building {
-private:
+  private:
     string buildingID;
     string buildingName;
     string buildingLocation;
+    Attendant* assignedAttendant;
 
-public:
+  public:
     Building(const string& id, const string& name, const string& location)
-        : buildingID(id), buildingName(name), buildingLocation(location) {}
+        : buildingID(id), buildingName(name), buildingLocation(location), assignedAttendant(nullptr) {}
 
     string getBuildingID() const {
         return buildingID;

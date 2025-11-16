@@ -1,12 +1,15 @@
 #pragma once
 #include "Person.h"
+#include "building.h"
 
 class Attendant : public Person {
-private:
+  private:
+    string AttendantId;
+    Building* assignedBuilding;
 
-public:
-    Attendant(const string& id, const string& name, const string& email, const string& phone)
-        : Person(id, name, email, phone) {}
+  public:
+    Attendant(const string& id, const string& name, const string& email, const string& phone, const string& aid)
+        : Person(id, name, email, phone), assignedBuilding(nullptr), AttendantId(aid) {}
 
     void displayInfo() const {
         cout << "Attendant Information:" << endl;
