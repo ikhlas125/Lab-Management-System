@@ -171,13 +171,146 @@ void DataManager::loadAttendants() {
 
     delete[] temp;
     file.close();
-    cout << "Loaded " << Attendants.size() << " Academic Officer." << endl;
+    cout << "Loaded " << Attendants.size() << " Attendants." << endl;
+}
+
+void DataManager::loadHeadofDep() {
+    HeadOfDeps.clear();
+
+    ifstream file("head_of_department.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open head_of_department.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid head_of_department.bin format" << endl;
+        return;
+    }
+
+    HeadOfDepartmentR* temp = new HeadOfDepartmentR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(HeadOfDepartmentR) * count);
+    if (!file) {
+        cout << "Error: Could not read all HeadofDeps records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    for (int i = 0; i < count; ++i) {
+        Person* tempo = searchByID(temp[i].personId);
+        HeadOfDeps.push_back(
+            HeadOfDep(tempo->getId(), tempo->getName(), tempo->getEmail(), tempo->getPhone(), temp[i].hodId));
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << HeadOfDeps.size() << " HeadofDeps." << endl;
+}
+
+void DataManager::loadBuildings() {
+    Buildings.clear();
+
+    ifstream file("buildings.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open buildings.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid buildings.bin format" << endl;
+        return;
+    }
+
+    BuildingR* temp = new BuildingR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(BuildingR) * count);
+    if (!file) {
+        cout << "Error: Could not read all HeadofDeps records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    for (int i = 0; i < count; ++i) {
+        Attendant* AttendantB = searchByIDAttendant(temp[i].attendantPersonId);
+        Buildings.push_back(Building(temp[i].buildingId, temp[i].buildingName, temp[i].address));
+        Building* buildingPtr = &Buildings.back();
+        buildingPtr->setAssignedAttendant(AttendantB);
+        if (AttendantB) {
+            AttendantB->setAssignedBuilding(buildingPtr);
+        }
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << Buildings.size() << " Buildings." << endl;
+}
+
+void DataManager::loadRooms() {
+    Rooms.clear();
+
+    ifstream file("rooms.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open rooms.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid rooms.bin format" << endl;
+        return;
+    }
+
+    RoomR* temp = new RoomR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(RoomR) * count);
+    if (!file) {
+        cout << "Error: Could not read all HeadofDeps records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    Rooms.reserve(count); // Prevent reallocation invalidating pointers
+
+    for (int i = 0; i < count; ++i) {
+        Rooms.push_back(Room(temp[i].roomId, temp[i].roomNumber, temp[i].capacity, temp[i].floor));
+        Room* roomPtr = &Rooms.back();
+        Building* building = searchByBuildingID(temp[i].buildingId);
+        roomPtr->setBuilding(building);
+        if (building) {
+            building->addRoom(roomPtr);
+        }
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << Rooms.size() << " Rooms." << endl;
+}
+
+Building* DataManager::searchByBuildingID(const string& Id) {
+    for (int i = 0; i < Buildings.size(); i++) {
+        if (Id == Buildings[i].getBuildingID()) {
+            return &Buildings[i];
+        }
+    }
+    return nullptr;
 }
 
 Person* DataManager::searchByID(const string& Id) {
     for (int i = 0; i < Persons.size(); i++) {
         if (Id == Persons[i].getId()) {
             return &Persons[i];
+        }
+    }
+    return nullptr;
+}
+
+Attendant* DataManager::searchByIDAttendant(const string& Id) {
+    for (int i = 0; i < Attendants.size(); i++) {
+        if (Id == Attendants[i].getId()) {
+            return &Attendants[i];
         }
     }
     return nullptr;
@@ -210,5 +343,23 @@ void DataManager::printAcademicOfficers() const {
 void DataManager::printAttendants() const {
     for (const auto& l : Attendants) {
         l.displayInfo();
+    }
+}
+
+void DataManager::printHeadofDep() const {
+    for (const auto& h : HeadOfDeps) {
+        h.displayInfo();
+    }
+}
+
+void DataManager::printBuildings() const {
+    for (const auto& b : Buildings) {
+        b.displayInfo();
+    }
+}
+
+void DataManager::printRooms() const {
+    for (const auto& r : Rooms) {
+        r.displayInfo();
     }
 }

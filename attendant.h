@@ -9,5 +9,9 @@ class Attendant : public Person {
 
   public:
     Attendant(const string& id, const string& name, const string& email, const string& phone, const string& aid);
+    string getAttendantId() const;
+    Building* getAssignedBuilding() const;
+    void setAttendantId(const string& aid);
+    void setAssignedBuilding(Building* building);
     void displayInfo() const;
 };

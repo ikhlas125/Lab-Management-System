@@ -25,3 +25,23 @@ struct AttendantR {
     char personId[10];
     char buildingId[10];
 };
+
+struct HeadOfDepartmentR {
+    char hodId[10];
+    char personId[10];
+};
+
+struct BuildingR {
+    char buildingId[10];
+    char buildingName[50];
+    char address[100];
+    char attendantPersonId[10];
+};
+
+struct RoomR {
+    char roomId[10];
+    char roomNumber[20];
+    int capacity;
+    char buildingId[10];
+    int floor;
+};
