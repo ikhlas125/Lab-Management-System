@@ -1,3 +1,4 @@
+#include "academicOfficer.h"
 #include "attendant.h"
 #include "instructor.h"
 #include "ta.h"
@@ -22,11 +23,17 @@ struct TeachingAssistant {
     char personId[10];
 };
 
+struct AcademicOfficerR {
+    char officerId[10];
+    char personId[10];
+};
+
 class DataManager {
   private:
     vector<Instructor> Instructors;
     vector<Person> Persons;
     vector<TA> TeachingAssistants;
+    vector<AcademicOfficer> AcademicOfficers;
 
   public:
     void loadPersons() {
@@ -130,7 +137,42 @@ class DataManager {
 
         delete[] temp;
         file.close();
-        cout << "Loaded " << Instructors.size() << "TA." << endl;
+        cout << "Loaded " << Instructors.size() << " TA." << endl;
+    }
+
+    void loadAcademicOfficers() {
+        AcademicOfficers.clear();
+
+        ifstream file("academic_officers.bin", ios::binary);
+        if (!file) {
+            cout << "Error: Cannot open academic_officers.bin" << endl;
+            return;
+        }
+
+        int count = 0;
+        file.read(reinterpret_cast<char*>(&count), sizeof(int));
+        if (!file || count <= 0) {
+            cout << "Error: Invalid academic_officers.bin format" << endl;
+            return;
+        }
+
+        AcademicOfficerR* temp = new AcademicOfficerR[count];
+        file.read(reinterpret_cast<char*>(temp), sizeof(TeachingAssistant) * count);
+        if (!file) {
+            cout << "Error: Could not read all Academic Officer records" << endl;
+            delete[] temp;
+            return;
+        }
+
+        for (int i = 0; i < count; ++i) {
+            Person* tempo = searchByID(temp[i].personId);
+            AcademicOfficers.push_back(AcademicOfficer(tempo->getId(), tempo->getName(), tempo->getEmail(),
+                                                       tempo->getPhone(), temp[i].officerId));
+        }
+
+        delete[] temp;
+        file.close();
+        cout << "Loaded " << Instructors.size() << " Academic Officer." << endl;
     }
 
     Person* searchByID(const string& Id) {
@@ -157,6 +199,12 @@ class DataManager {
     void printTAs() const {
         for (const auto& t : TeachingAssistants) {
             t.displayInfo();
+        }
+    }
+
+    void printAcademicOfficers() const {
+        for (const auto& a : AcademicOfficers) {
+            a.displayInfo();
         }
     }
 };
