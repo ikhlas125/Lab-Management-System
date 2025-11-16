@@ -11,50 +11,16 @@ class LabSession {
     string topic;
 
   public:
-    LabSession(const string& id, const string& date, const string& start, const string& end, const string& top)
-        : sessionID(id), sessionDate(date), startTime(start), endTime(end), topic(top) {}
+    LabSession(const string& id, const string& date, const string& start, const string& end, const string& top);
 
-    string getSessionID() const {
-        return sessionID;
-    }
-
-    string getSessionDate() const {
-        return sessionDate;
-    }
-
-    string getStartTime() const {
-        return startTime;
-    }
-
-    string getEndTime() const {
-        return endTime;
-    }
-
-    string getTopic() const {
-        return topic;
-    }
-
-    void setSessionDate(const string& date) {
-        sessionDate = date;
-    }
-
-    void setStartTime(const string& start) {
-        startTime = start;
-    }
-
-    void setEndTime(const string& end) {
-        endTime = end;
-    }
-
-    void setTopic(const string& top) {
-        topic = top;
-    }
-
-    void displayInfo() const {
-        cout << "Session ID: " << sessionID << endl;
-        cout << "Date: " << sessionDate << endl;
-        cout << "Start Time: " << startTime << endl;
-        cout << "End Time: " << endTime << endl;
-        cout << "Topic: " << topic << endl;
-    }
+    string getSessionID() const;
+    string getSessionDate() const;
+    string getStartTime() const;
+    string getEndTime() const;
+    string getTopic() const;
+    void setSessionDate(const string& date);
+    void setStartTime(const string& start);
+    void setEndTime(const string& end);
+    void setTopic(const string& top);
+    void displayInfo() const;
 };

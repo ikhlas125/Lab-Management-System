@@ -8,11 +8,6 @@ class Attendant : public Person {
     Building* assignedBuilding;
 
   public:
-    Attendant(const string& id, const string& name, const string& email, const string& phone, const string& aid)
-        : Person(id, name, email, phone), assignedBuilding(nullptr), AttendantId(aid) {}
-
-    void displayInfo() const {
-        cout << "Attendant Information:" << endl;
-        Person::displayInfo();
-    }
+    Attendant(const string& id, const string& name, const string& email, const string& phone, const string& aid);
+    void displayInfo() const;
 };

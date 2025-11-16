@@ -11,45 +11,15 @@ class Person {
 
   public:
     Person() = default;
-    Person(const string& id, const string& name, const string& email, const string& phone)
-        : id(id), name(name), email(email), phone(phone) {}
+    Person(const string& id, const string& name, const string& email, const string& phone);
 
-    string getId() const {
-        return id;
-    }
-
-    string getName() const {
-        return name;
-    }
-
-    string getEmail() const {
-        return email;
-    }
-
-    string getPhone() const {
-        return phone;
-    }
-
-    void setName(const string& newName) {
-        name = newName;
-    }
-
-    void setId(const string& newId) {
-        id = newId;
-    }
-
-    void setEmail(const string& newEmail) {
-        email = newEmail;
-    }
-
-    void setPhone(const string& newPhone) {
-        phone = newPhone;
-    }
-
-    void displayInfo() const {
-        cout << "ID: " << id << endl;
-        cout << "Name: " << name << endl;
-        cout << "Email: " << email << endl;
-        cout << "Phone: " << phone << endl;
-    }
+    string getId() const;
+    string getName() const;
+    string getEmail() const;
+    string getPhone() const;
+    void setName(const string& newName);
+    void setId(const string& newId);
+    void setEmail(const string& newEmail);
+    void setPhone(const string& newPhone);
+    void displayInfo() const;
 };

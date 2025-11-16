@@ -16,42 +16,14 @@ class LabSection {
     vector<TA*> assignedTas;
 
   public:
-    LabSection(const string& id, const string& name, int maxStud, const string& sched)
-        : sectionID(id), sectionName(name), maxStudents(maxStud), schedule(sched), assignedInstructor(nullptr),
-          assignedTas() {}
+    LabSection(const string& id, const string& name, int maxStud, const string& sched);
 
-    string getSectionID() const {
-        return sectionID;
-    }
-
-    string getSectionName() const {
-        return sectionName;
-    }
-
-    int getMaxStudents() const {
-        return maxStudents;
-    }
-
-    string getSchedule() const {
-        return schedule;
-    }
-
-    void setSectionName(const string& name) {
-        sectionName = name;
-    }
-
-    void setMaxStudents(int maxStud) {
-        maxStudents = maxStud;
-    }
-
-    void setSchedule(const string& sched) {
-        schedule = sched;
-    }
-
-    void displayInfo() const {
-        cout << "Section ID: " << sectionID << endl;
-        cout << "Section Name: " << sectionName << endl;
-        cout << "Max Students: " << maxStudents << endl;
-        cout << "Schedule: " << schedule << endl;
-    }
+    string getSectionID() const;
+    string getSectionName() const;
+    int getMaxStudents() const;
+    string getSchedule() const;
+    void setSectionName(const string& name);
+    void setMaxStudents(int maxStud);
+    void setSchedule(const string& sched);
+    void displayInfo() const;
 };
