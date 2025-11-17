@@ -362,12 +362,53 @@ void DataManager::loadLabSections() {
     delete[] temp;
     file.close();
     cout << "Loaded " << LabSections.size() << " LabSections." << endl;
+
+    // Load and assign TAs to sections
+    ifstream taFile("section_tas.bin", ios::binary);
+    if (taFile.is_open()) {
+        int taCount = 0;
+        taFile.read(reinterpret_cast<char*>(&taCount), sizeof(int));
+        if (taFile && taCount > 0) {
+            SectionTA* sectionTAs = new SectionTA[taCount];
+            taFile.read(reinterpret_cast<char*>(sectionTAs), sizeof(SectionTA) * taCount);
+            if (taFile) {
+                for (int i = 0; i < taCount; ++i) {
+                    // Find the section
+                    LabSection* section = nullptr;
+                    for (auto& sec : LabSections) {
+                        if (sec.getSectionID() == string(sectionTAs[i].sectionId)) {
+                            section = &sec;
+                            break;
+                        }
+                    }
+                    // Find the TA and assign
+                    if (section) {
+                        TA* ta = searchByTAId(sectionTAs[i].taId);
+                        if (ta) {
+                            section->addTA(ta);
+                        }
+                    }
+                }
+            }
+            delete[] sectionTAs;
+        }
+        taFile.close();
+    }
 }
 
 Instructor* DataManager::searchByInstructorId(const string& Id) {
     for (int i = 0; i < Instructors.size(); i++) {
         if (Id == Instructors[i].getInstructorId()) {
             return &Instructors[i];
+        }
+    }
+    return nullptr;
+}
+
+TA* DataManager::searchByTAId(const string& Id) {
+    for (int i = 0; i < TeachingAssistants.size(); i++) {
+        if (Id == TeachingAssistants[i].getTAId()) {
+            return &TeachingAssistants[i];
         }
     }
     return nullptr;

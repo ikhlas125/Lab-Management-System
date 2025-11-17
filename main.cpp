@@ -13,7 +13,6 @@ int main() {
     dm.loadLabs(); // Link rooms to buildings
     dm.loadLabSections();
     // dm.printPersons();
-    dm.loadRooms(); // <-- REMOVE THIS LINE!
     dm.printInstructors();
     dm.printTAs();
     dm.printAcademicOfficers();

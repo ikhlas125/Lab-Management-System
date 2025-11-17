@@ -41,6 +41,7 @@ class DataManager {
     Building* searchByBuildingID(const string& Id);
     Lab* searchByLabId(const string& Id);
     Instructor* searchByInstructorId(const string& Id);
+    TA* searchByTAId(const string& Id);
     void printInstructors() const;
     void printPersons() const;
     void printTAs() const;

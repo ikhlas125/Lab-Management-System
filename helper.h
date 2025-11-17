@@ -62,3 +62,8 @@ struct LabSectionR {
     char semester[20];
     char academicYear[15];
 };
+
+struct SectionTA {
+    char sectionId[10];
+    char taId[10];
+};
