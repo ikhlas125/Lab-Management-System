@@ -9,5 +9,7 @@ class Instructor : public Person {
 
   public:
     Instructor(const string& id, const string& name, const string& email, const string& phone, const string& iid);
+    string getInstructorId() const;
+    void addAssignedSection(LabSection* section);
     void displayInfo() const;
 };

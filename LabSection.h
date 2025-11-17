@@ -4,26 +4,39 @@
 #include <vector>
 using namespace std;
 
+class Lab;
 class Instructor;
+class LabSession;
 
 class LabSection {
   private:
     string sectionID;
-    string sectionName;
-    int maxStudents;
-    string schedule;
+    Lab* lab;
     Instructor* assignedInstructor;
     vector<TA*> assignedTas;
+    vector<LabSession*> sessions;
+    string sectionName;
+    string semester;
+    string academicYear;
 
   public:
-    LabSection(const string& id, const string& name, int maxStud, const string& sched);
+    LabSection(const string& id, const string& name, const string& sem, const string& year);
 
     string getSectionID() const;
     string getSectionName() const;
-    int getMaxStudents() const;
-    string getSchedule() const;
+    string getSemester() const;
+    string getAcademicYear() const;
+    Lab* getLab() const;
+    Instructor* getAssignedInstructor() const;
+    const vector<TA*>& getAssignedTas() const;
+    const vector<LabSession*>& getSessions() const;
+
     void setSectionName(const string& name);
-    void setMaxStudents(int maxStud);
-    void setSchedule(const string& sched);
+    void setSemester(const string& sem);
+    void setAcademicYear(const string& year);
+    void setLab(Lab* l);
+    void setAssignedInstructor(Instructor* instr);
+    void addTA(TA* ta);
+    void addSession(LabSession* session);
     void displayInfo() const;
 };

@@ -45,3 +45,20 @@ struct RoomR {
     char buildingId[10];
     int floor;
 };
+
+struct LabR {
+    char labId[10];
+    char labCode[20];
+    char labName[50];
+    int credits;
+    char semester[20];
+};
+
+struct LabSectionR {
+    char sectionId[10];
+    char labId[10];
+    char sectionNumber[5];
+    char instructorId[10];
+    char semester[20];
+    char academicYear[15];
+};

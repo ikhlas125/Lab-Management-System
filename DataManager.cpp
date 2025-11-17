@@ -289,6 +289,99 @@ void DataManager::loadRooms() {
     cout << "Loaded " << Rooms.size() << " Rooms." << endl;
 }
 
+void DataManager::loadLabs() {
+    Labs.clear();
+
+    ifstream file("labs.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open labs.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid labs.bin format" << endl;
+        return;
+    }
+
+    LabR* temp = new LabR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(LabR) * count);
+    if (!file) {
+        cout << "Error: Could not read all Labs records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    for (int i = 0; i < count; ++i) {
+        Labs.push_back(Lab(temp[i].labId, temp[i].labName, temp[i].labCode, temp[i].credits, temp[i].semester));
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << Labs.size() << " Labs." << endl;
+}
+
+void DataManager::loadLabSections() {
+    LabSections.clear();
+
+    ifstream file("lab_sections.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open lab_sections.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid lab_sections.bin format" << endl;
+        return;
+    }
+
+    LabSectionR* temp = new LabSectionR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(LabSectionR) * count);
+    if (!file) {
+        cout << "Error: Could not read all Labs records" << endl;
+        delete[] temp;
+        return;
+    }
+    LabSections.reserve(count);
+    for (int i = 0; i < count; ++i) {
+        LabSections.push_back(
+            LabSection(temp[i].sectionId, temp[i].sectionNumber, temp[i].semester, temp[i].academicYear));
+        LabSection* labSectionPtr = &LabSections.back();
+        Lab* LabA = searchByLabId(temp[i].labId);
+        Instructor* InstructorA = searchByInstructorId(temp[i].instructorId);
+        labSectionPtr->setLab(LabA);
+        labSectionPtr->setAssignedInstructor(InstructorA);
+        if (InstructorA) {
+            InstructorA->addAssignedSection(labSectionPtr);
+        }
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << LabSections.size() << " LabSections." << endl;
+}
+
+Instructor* DataManager::searchByInstructorId(const string& Id) {
+    for (int i = 0; i < Instructors.size(); i++) {
+        if (Id == Instructors[i].getInstructorId()) {
+            return &Instructors[i];
+        }
+    }
+    return nullptr;
+}
+
+Lab* DataManager::searchByLabId(const string& Id) {
+    for (int i = 0; i < Labs.size(); i++) {
+        if (Id == Labs[i].getLabId()) {
+            return &Labs[i];
+        }
+    }
+    return nullptr;
+}
+
 Building* DataManager::searchByBuildingID(const string& Id) {
     for (int i = 0; i < Buildings.size(); i++) {
         if (Id == Buildings[i].getBuildingID()) {
@@ -361,5 +454,17 @@ void DataManager::printBuildings() const {
 void DataManager::printRooms() const {
     for (const auto& r : Rooms) {
         r.displayInfo();
+    }
+}
+
+void DataManager::printLabs() const {
+    for (const auto& l : Labs) {
+        l.displayInfo();
+    }
+}
+
+void DataManager::printLabSections() const {
+    for (const auto& l : LabSections) {
+        l.displayInfo();
     }
 }

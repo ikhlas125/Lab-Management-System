@@ -1,3 +1,5 @@
+#include "Lab.h"
+#include "LabSection.h"
 #include "academicOfficer.h"
 #include "attendant.h"
 #include "building.h"
@@ -20,6 +22,8 @@ class DataManager {
     vector<HeadOfDep> HeadOfDeps;
     vector<Building> Buildings;
     vector<Room> Rooms;
+    vector<Lab> Labs;
+    vector<LabSection> LabSections;
 
   public:
     void loadPersons();
@@ -30,9 +34,13 @@ class DataManager {
     void loadHeadofDep();
     void loadBuildings();
     void loadRooms();
+    void loadLabs();
+    void loadLabSections();
     Person* searchByID(const string& Id);
     Attendant* searchByIDAttendant(const string& Id);
     Building* searchByBuildingID(const string& Id);
+    Lab* searchByLabId(const string& Id);
+    Instructor* searchByInstructorId(const string& Id);
     void printInstructors() const;
     void printPersons() const;
     void printTAs() const;
@@ -41,4 +49,6 @@ class DataManager {
     void printHeadofDep() const;
     void printBuildings() const;
     void printRooms() const;
+    void printLabs() const;
+    void printLabSections() const;
 };
