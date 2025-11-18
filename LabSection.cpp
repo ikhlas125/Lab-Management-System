@@ -3,6 +3,7 @@
 #include "Instructor.h"
 #include "Lab.h"
 #include "LabSession.h"
+#include "room.h"
 
 LabSection::LabSection(const string& id, const string& name, const string& sem, const string& year)
     : sectionID(id), sectionName(name), semester(sem), academicYear(year), lab(nullptr), assignedInstructor(nullptr),
@@ -105,5 +106,19 @@ void LabSection::displayInfo() const {
         cout << "Teaching Assistants: None" << endl;
     }
 
-    cout << "Number of Sessions: " << sessions.size() << endl;
+    if (!sessions.empty()) {
+        cout << "Sessions (" << sessions.size() << "):" << endl;
+        for (const auto& session : sessions) {
+            if (session) {
+                cout << "  - Session ID: " << session->getSessionID() << ", Week: " << session->getWeekNumber()
+                     << ", Status: " << session->getStatus();
+                if (session->getAssignedRoom()) {
+                    cout << ", Room: " << session->getAssignedRoom()->getRoomName();
+                }
+                cout << endl;
+            }
+        }
+    } else {
+        cout << "Sessions: None" << endl;
+    }
 }

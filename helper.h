@@ -67,3 +67,19 @@ struct SectionTA {
     char sectionId[10];
     char taId[10];
 };
+
+struct LabSessionR {
+    char sessionId[10];
+    char sectionId[10];
+    char roomId[10];
+    char scheduleId[10];
+    int weekNumber;
+    char status[15];
+};
+
+struct ScheduleR {
+    char scheduleId[10];
+    char dayOfWeek[15];
+    char expectedStartTime[25];
+    char expectedEndTime[25];
+};

@@ -3,27 +3,37 @@
 using namespace std;
 
 class LabSection;
+class Room;
+class Schedule;
+class TimeSheet;
 
 class LabSession {
   private:
     string sessionID;
-    string sessionDate;
-    string startTime;
-    string endTime;
-    string topic;
     LabSection* section;
+    Room* assignedRoom;
+    Schedule* schedule;
+    TimeSheet* timeSheet;
+    string WeekNumber;
+    string status;
 
   public:
-    LabSession(const string& id, const string& date, const string& start, const string& end, const string& top);
+    LabSession(const string& id, const string& weekNum, const string& stat);
 
     string getSessionID() const;
-    string getSessionDate() const;
-    string getStartTime() const;
-    string getEndTime() const;
-    string getTopic() const;
-    void setSessionDate(const string& date);
-    void setStartTime(const string& start);
-    void setEndTime(const string& end);
-    void setTopic(const string& top);
+    LabSection* getSection() const;
+    Room* getAssignedRoom() const;
+    Schedule* getSchedule() const;
+    TimeSheet* getTimeSheet() const;
+    string getWeekNumber() const;
+    string getStatus() const;
+
+    void setSection(LabSection* sec);
+    void setAssignedRoom(Room* room);
+    void setSchedule(Schedule* sched);
+    void setTimeSheet(TimeSheet* ts);
+    void setWeekNumber(const string& weekNum);
+    void setStatus(const string& stat);
+
     void displayInfo() const;
 };

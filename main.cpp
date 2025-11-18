@@ -8,11 +8,12 @@ int main() {
     dm.loadAcademicOfficers();
     dm.loadAttendants();
     dm.loadHeadofDep();
-    dm.loadBuildings(); // Load buildings first
+    dm.loadBuildings();
     dm.loadRooms();
-    dm.loadLabs(); // Link rooms to buildings
+    dm.loadLabs();
     dm.loadLabSections();
-    // dm.printPersons();
+    dm.loadLabSchedules();
+    dm.loadLabSessions();
     dm.printInstructors();
     dm.printTAs();
     dm.printAcademicOfficers();
@@ -22,6 +23,8 @@ int main() {
     dm.printRooms();
     dm.printLabs();
     dm.printLabSections();
+    dm.printLabSchedules();
+    dm.printLabSessions();
     system("pause");
     return 0;
 }

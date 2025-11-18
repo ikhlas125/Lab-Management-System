@@ -1,5 +1,6 @@
 #include "Lab.h"
 #include "LabSection.h"
+#include "LabSession.h"
 #include "academicOfficer.h"
 #include "attendant.h"
 #include "building.h"
@@ -7,6 +8,7 @@
 #include "helper.h"
 #include "instructor.h"
 #include "room.h"
+#include "schedule.h"
 #include "ta.h"
 #include <fstream>
 #include <iomanip>
@@ -24,6 +26,8 @@ class DataManager {
     vector<Room> Rooms;
     vector<Lab> Labs;
     vector<LabSection> LabSections;
+    vector<Schedule> LabSchedules;
+    vector<LabSession> LabSessions;
 
   public:
     void loadPersons();
@@ -36,12 +40,17 @@ class DataManager {
     void loadRooms();
     void loadLabs();
     void loadLabSections();
+    void loadLabSchedules();
+    void loadLabSessions();
     Person* searchByID(const string& Id);
     Attendant* searchByIDAttendant(const string& Id);
     Building* searchByBuildingID(const string& Id);
     Lab* searchByLabId(const string& Id);
     Instructor* searchByInstructorId(const string& Id);
     TA* searchByTAId(const string& Id);
+    LabSection* searchbyLabSectionId(const string& Id);
+    Room* searchByRoomId(const string& Id);
+    Schedule* searchByScheduleId(const string& Id);
     void printInstructors() const;
     void printPersons() const;
     void printTAs() const;
@@ -52,4 +61,6 @@ class DataManager {
     void printRooms() const;
     void printLabs() const;
     void printLabSections() const;
+    void printLabSchedules() const;
+    void printLabSessions() const;
 };

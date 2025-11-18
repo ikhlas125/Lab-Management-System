@@ -363,7 +363,6 @@ void DataManager::loadLabSections() {
     file.close();
     cout << "Loaded " << LabSections.size() << " LabSections." << endl;
 
-    // Load and assign TAs to sections
     ifstream taFile("section_tas.bin", ios::binary);
     if (taFile.is_open()) {
         int taCount = 0;
@@ -373,7 +372,6 @@ void DataManager::loadLabSections() {
             taFile.read(reinterpret_cast<char*>(sectionTAs), sizeof(SectionTA) * taCount);
             if (taFile) {
                 for (int i = 0; i < taCount; ++i) {
-                    // Find the section
                     LabSection* section = nullptr;
                     for (auto& sec : LabSections) {
                         if (sec.getSectionID() == string(sectionTAs[i].sectionId)) {
@@ -381,7 +379,6 @@ void DataManager::loadLabSections() {
                             break;
                         }
                     }
-                    // Find the TA and assign
                     if (section) {
                         TA* ta = searchByTAId(sectionTAs[i].taId);
                         if (ta) {
@@ -394,6 +391,108 @@ void DataManager::loadLabSections() {
         }
         taFile.close();
     }
+}
+
+void DataManager::loadLabSchedules() {
+    LabSchedules.clear();
+
+    ifstream file("schedules.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open schedules.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid schedules.bin format" << endl;
+        return;
+    }
+
+    ScheduleR* temp = new ScheduleR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(ScheduleR) * count);
+    if (!file) {
+        cout << "Error: Could not read all Schedules records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    for (int i = 0; i < count; ++i) {
+        Day day = Day::Monday;
+        string dayStr = temp[i].dayOfWeek;
+        if (dayStr == "Monday")
+            day = Day::Monday;
+        else if (dayStr == "Tuesday")
+            day = Day::Tuesday;
+        else if (dayStr == "Wednesday")
+            day = Day::Wednesday;
+        else if (dayStr == "Thursday")
+            day = Day::Thursday;
+        else if (dayStr == "Friday")
+            day = Day::Friday;
+        else if (dayStr == "Saturday")
+            day = Day::Saturday;
+        else if (dayStr == "Sunday")
+            day = Day::Sunday;
+
+        LabSchedules.push_back(Schedule(temp[i].scheduleId, day, temp[i].expectedStartTime, temp[i].expectedEndTime));
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << LabSchedules.size() << " Schedules." << endl;
+}
+
+void DataManager::loadLabSessions() {
+    LabSessions.clear();
+
+    ifstream file("lab_sessions.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot open lab_sessions.bin" << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file || count <= 0) {
+        cout << "Error: Invalid lab_sessions.bin format" << endl;
+        return;
+    }
+
+    LabSessionR* temp = new LabSessionR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(LabSessionR) * count);
+    if (!file) {
+        cout << "Error: Could not read all LabsSessions records" << endl;
+        delete[] temp;
+        return;
+    }
+
+    LabSessions.reserve(count);
+    for (int i = 0; i < count; ++i) {
+        LabSessions.push_back(LabSession(temp[i].sessionId, to_string(temp[i].weekNumber), temp[i].status));
+        LabSession* LabSessionPtr = &LabSessions.back();
+        LabSection* section = searchbyLabSectionId(temp[i].sectionId);
+        LabSessionPtr->setSection(section);
+        LabSessionPtr->setAssignedRoom(searchByRoomId(temp[i].roomId));
+        LabSessionPtr->setSchedule(searchByScheduleId(temp[i].scheduleId));
+
+        if (section) {
+            section->addSession(LabSessionPtr);
+        }
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << LabSessions.size() << " LabSessions." << endl;
+}
+
+LabSection* DataManager::searchbyLabSectionId(const string& Id) {
+    for (int i = 0; i < LabSections.size(); i++) {
+        if (Id == LabSections[i].getSectionID()) {
+            return &LabSections[i];
+        }
+    }
+    return nullptr;
 }
 
 Instructor* DataManager::searchByInstructorId(const string& Id) {
@@ -409,6 +508,24 @@ TA* DataManager::searchByTAId(const string& Id) {
     for (int i = 0; i < TeachingAssistants.size(); i++) {
         if (Id == TeachingAssistants[i].getTAId()) {
             return &TeachingAssistants[i];
+        }
+    }
+    return nullptr;
+}
+
+Room* DataManager::searchByRoomId(const string& Id) {
+    for (int i = 0; i < Rooms.size(); i++) {
+        if (Id == Rooms[i].getRoomID()) {
+            return &Rooms[i];
+        }
+    }
+    return nullptr;
+}
+
+Schedule* DataManager::searchByScheduleId(const string& Id) {
+    for (int i = 0; i < LabSchedules.size(); i++) {
+        if (Id == LabSchedules[i].getScheduleId()) {
+            return &LabSchedules[i];
         }
     }
     return nullptr;
@@ -506,6 +623,18 @@ void DataManager::printLabs() const {
 
 void DataManager::printLabSections() const {
     for (const auto& l : LabSections) {
+        l.displayInfo();
+    }
+}
+
+void DataManager::printLabSchedules() const {
+    for (const auto& l : LabSchedules) {
+        l.displayInfo();
+    }
+}
+
+void DataManager::printLabSessions() const {
+    for (const auto& l : LabSessions) {
         l.displayInfo();
     }
 }

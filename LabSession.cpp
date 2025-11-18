@@ -1,48 +1,113 @@
 #include "LabSession.h"
 
-LabSession::LabSession(const string& id, const string& date, const string& start, const string& end, const string& top)
-    : sessionID(id), sessionDate(date), startTime(start), endTime(end), topic(top) {}
+#include "LabSection.h"
+#include "room.h"
+#include "schedule.h"
+#include "timesheet.h"
+
+LabSession::LabSession(const string& id, const string& weekNum, const string& stat)
+    : sessionID(id), WeekNumber(weekNum), status(stat), section(nullptr), assignedRoom(nullptr), schedule(nullptr),
+      timeSheet(nullptr) {}
 
 string LabSession::getSessionID() const {
     return sessionID;
 }
 
-string LabSession::getSessionDate() const {
-    return sessionDate;
+LabSection* LabSession::getSection() const {
+    return section;
 }
 
-string LabSession::getStartTime() const {
-    return startTime;
+Room* LabSession::getAssignedRoom() const {
+    return assignedRoom;
 }
 
-string LabSession::getEndTime() const {
-    return endTime;
+Schedule* LabSession::getSchedule() const {
+    return schedule;
 }
 
-string LabSession::getTopic() const {
-    return topic;
+TimeSheet* LabSession::getTimeSheet() const {
+    return timeSheet;
 }
 
-void LabSession::setSessionDate(const string& date) {
-    sessionDate = date;
+string LabSession::getWeekNumber() const {
+    return WeekNumber;
 }
 
-void LabSession::setStartTime(const string& start) {
-    startTime = start;
+string LabSession::getStatus() const {
+    return status;
 }
 
-void LabSession::setEndTime(const string& end) {
-    endTime = end;
+void LabSession::setSection(LabSection* sec) {
+    section = sec;
 }
 
-void LabSession::setTopic(const string& top) {
-    topic = top;
+void LabSession::setAssignedRoom(Room* room) {
+    assignedRoom = room;
+}
+
+void LabSession::setSchedule(Schedule* sched) {
+    schedule = sched;
+}
+
+void LabSession::setTimeSheet(TimeSheet* ts) {
+    timeSheet = ts;
+}
+
+void LabSession::setWeekNumber(const string& weekNum) {
+    WeekNumber = weekNum;
+}
+
+void LabSession::setStatus(const string& stat) {
+    status = stat;
 }
 
 void LabSession::displayInfo() const {
+    cout << "Lab Session Information:" << endl;
     cout << "Session ID: " << sessionID << endl;
-    cout << "Date: " << sessionDate << endl;
-    cout << "Start Time: " << startTime << endl;
-    cout << "End Time: " << endTime << endl;
-    cout << "Topic: " << topic << endl;
+    cout << "Week Number: " << WeekNumber << endl;
+    cout << "Status: " << status << endl;
+
+    if (section) {
+        cout << "Section: " << section->getSectionName() << " (ID: " << section->getSectionID() << ")" << endl;
+    } else {
+        cout << "Section: Not Assigned" << endl;
+    }
+
+    if (assignedRoom) {
+        cout << "Room: " << assignedRoom->getRoomName() << " (ID: " << assignedRoom->getRoomID() << ")" << endl;
+    } else {
+        cout << "Room: Not Assigned" << endl;
+    }
+
+    if (schedule) {
+        cout << "Schedule ID: " << schedule->getScheduleId() << endl;
+        cout << "  Day: ";
+        switch (schedule->getDayOfWeek()) {
+        case Day::Monday:
+            cout << "Monday";
+            break;
+        case Day::Tuesday:
+            cout << "Tuesday";
+            break;
+        case Day::Wednesday:
+            cout << "Wednesday";
+            break;
+        case Day::Thursday:
+            cout << "Thursday";
+            break;
+        case Day::Friday:
+            cout << "Friday";
+            break;
+        case Day::Saturday:
+            cout << "Saturday";
+            break;
+        case Day::Sunday:
+            cout << "Sunday";
+            break;
+        }
+        cout << endl;
+        cout << "  Time: " << schedule->getExpectedStartTime() << " - " << schedule->getExpectedEndTime() << endl;
+    } else {
+        cout << "Schedule: Not Assigned" << endl;
+    }
 }
