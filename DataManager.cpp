@@ -1,5 +1,7 @@
 #include "DataManager.h"
 
+#include <cstring>
+
 void DataManager::loadPersons() {
     Persons.clear();
 
@@ -634,7 +636,127 @@ void DataManager::printLabSchedules() const {
 }
 
 void DataManager::printLabSessions() const {
-    for (const auto& l : LabSessions) {
-        l.displayInfo();
+    for (const auto& s : LabSessions) {
+        s.displayInfo();
     }
+}
+
+vector<Lab>& DataManager::getLabs() {
+    return Labs;
+}
+
+vector<LabSection>& DataManager::getLabSections() {
+    return LabSections;
+}
+
+vector<LabSession>& DataManager::getLabSessions() {
+    return LabSessions;
+}
+
+vector<Instructor>& DataManager::getInstructors() {
+    return Instructors;
+}
+
+vector<TA>& DataManager::getTAs() {
+    return TeachingAssistants;
+}
+
+vector<Person>& DataManager::getPersons() {
+    return Persons;
+}
+
+vector<Building>& DataManager::getBuildings() {
+    return Buildings;
+}
+
+vector<Room>& DataManager::getRooms() {
+    return Rooms;
+}
+
+vector<Schedule>& DataManager::getSchedules() {
+    return LabSchedules;
+}
+
+vector<Attendant>& DataManager::getAttendants() {
+    return Attendants;
+}
+
+vector<AcademicOfficer>& DataManager::getAcademicOfficers() {
+    return AcademicOfficers;
+}
+
+vector<HeadOfDep>& DataManager::getHeadOfDeps() {
+    return HeadOfDeps;
+}
+
+void DataManager::saveLabs() {
+    ofstream file("labs.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create labs.bin" << endl;
+        return;
+    }
+
+    int count = Labs.size();
+    file.write(reinterpret_cast<const char*>(&count), sizeof(int));
+
+    LabR* temp = new LabR[count];
+    for (int i = 0; i < count; ++i) {
+        strncpy(temp[i].labId, Labs[i].getLabId().c_str(), 9);
+        temp[i].labId[9] = '\0';
+
+        strncpy(temp[i].labCode, Labs[i].getLabCode().c_str(), 19);
+        temp[i].labCode[19] = '\0';
+
+        strncpy(temp[i].labName, Labs[i].getLabName().c_str(), 49);
+        temp[i].labName[49] = '\0';
+
+        temp[i].credits = Labs[i].getCredits();
+
+        strncpy(temp[i].semester, Labs[i].getSemester().c_str(), 19);
+        temp[i].semester[19] = '\0';
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(LabR) * count);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << count << " Labs to labs.bin" << endl;
+}
+
+void DataManager::saveLabSections() {
+    ofstream file("lab_sections.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create lab_sections.bin" << endl;
+        return;
+    }
+
+    int count = LabSections.size();
+    file.write(reinterpret_cast<const char*>(&count), sizeof(int));
+
+    LabSectionR* temp = new LabSectionR[count];
+    for (int i = 0; i < count; ++i) {
+        strncpy(temp[i].sectionId, LabSections[i].getSectionID().c_str(), 9);
+        temp[i].sectionId[9] = '\0';
+
+        strncpy(temp[i].labId, LabSections[i].getLab()->getLabId().c_str(), 9);
+        temp[i].labId[9] = '\0';
+
+        strncpy(temp[i].sectionNumber, LabSections[i].getSectionName().c_str(), 4);
+        temp[i].sectionNumber[4] = '\0';
+
+        strncpy(temp[i].instructorId, LabSections[i].getAssignedInstructor()->getInstructorId().c_str(), 9);
+        temp[i].instructorId[9] = '\0';
+
+        strncpy(temp[i].semester, LabSections[i].getSemester().c_str(), 19);
+        temp[i].semester[19] = '\0';
+
+        strncpy(temp[i].academicYear, LabSections[i].getAcademicYear().c_str(), 14);
+        temp[i].academicYear[14] = '\0';
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(LabSectionR) * count);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << count << " LabsSections to lab_sections.bin" << endl;
 }

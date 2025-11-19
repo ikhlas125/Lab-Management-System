@@ -42,6 +42,7 @@ class DataManager {
     void loadLabSections();
     void loadLabSchedules();
     void loadLabSessions();
+
     Person* searchByID(const string& Id);
     Attendant* searchByIDAttendant(const string& Id);
     Building* searchByBuildingID(const string& Id);
@@ -51,6 +52,20 @@ class DataManager {
     LabSection* searchbyLabSectionId(const string& Id);
     Room* searchByRoomId(const string& Id);
     Schedule* searchByScheduleId(const string& Id);
+
+    vector<Lab>& getLabs();
+    vector<LabSection>& getLabSections();
+    vector<LabSession>& getLabSessions();
+    vector<Instructor>& getInstructors();
+    vector<TA>& getTAs();
+    vector<Person>& getPersons();
+    vector<Building>& getBuildings();
+    vector<Room>& getRooms();
+    vector<Schedule>& getSchedules();
+    vector<Attendant>& getAttendants();
+    vector<AcademicOfficer>& getAcademicOfficers();
+    vector<HeadOfDep>& getHeadOfDeps();
+
     void printInstructors() const;
     void printPersons() const;
     void printTAs() const;
@@ -63,4 +78,7 @@ class DataManager {
     void printLabSections() const;
     void printLabSchedules() const;
     void printLabSessions() const;
+
+    void saveLabs();
+    void saveLabSections();
 };
