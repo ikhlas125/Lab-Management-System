@@ -81,4 +81,7 @@ class DataManager {
 
     void saveLabs();
     void saveLabSections();
+    void saveSectionTAs();
+    void saveSchedules();
+    void saveLabSessions();
 };

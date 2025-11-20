@@ -385,6 +385,7 @@ void DataManager::loadLabSections() {
                         TA* ta = searchByTAId(sectionTAs[i].taId);
                         if (ta) {
                             section->addTA(ta);
+                            ta->addAssignedSection(section);
                         }
                     }
                 }
@@ -759,4 +760,134 @@ void DataManager::saveLabSections() {
     file.close();
 
     cout << "Saved " << count << " LabsSections to lab_sections.bin" << endl;
+}
+
+void DataManager::saveSectionTAs() {
+    ofstream file("section_tas.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create section_tas.bin" << endl;
+        return;
+    }
+
+    int totalAssignments = 0;
+    for (int i = 0; i < LabSections.size(); i++) {
+        totalAssignments += LabSections[i].getAssignedTas().size();
+    }
+
+    file.write(reinterpret_cast<const char*>(&totalAssignments), sizeof(int));
+
+    SectionTA* temp = new SectionTA[totalAssignments];
+    int index = 0;
+
+    for (int i = 0; i < LabSections.size(); i++) {
+        for (int j = 0; j < LabSections[i].getAssignedTas().size(); j++) {
+            strncpy(temp[index].sectionId, LabSections[i].getSectionID().c_str(), 9);
+            temp[index].sectionId[9] = '\0';
+
+            strncpy(temp[index].taId, LabSections[i].getAssignedTas()[j]->getTAId().c_str(), 9);
+            temp[index].taId[9] = '\0';
+
+            index++;
+        }
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(SectionTA) * totalAssignments);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << totalAssignments << " TA assignments to section_tas.bin" << endl;
+}
+
+void DataManager::saveSchedules() {
+    ofstream file("schedules.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create schedules.bin" << endl;
+        return;
+    }
+
+    int count = LabSchedules.size();
+    file.write(reinterpret_cast<const char*>(&count), sizeof(int));
+
+    ScheduleR* temp = new ScheduleR[count];
+    for (int i = 0; i < count; ++i) {
+        strncpy(temp[i].scheduleId, LabSchedules[i].getScheduleId().c_str(), 9);
+        temp[i].scheduleId[9] = '\0';
+
+        Day day = LabSchedules[i].getDayOfWeek();
+        string dayStr;
+        switch (day) {
+        case Day::Monday:
+            dayStr = "Monday";
+            break;
+        case Day::Tuesday:
+            dayStr = "Tuesday";
+            break;
+        case Day::Wednesday:
+            dayStr = "Wednesday";
+            break;
+        case Day::Thursday:
+            dayStr = "Thursday";
+            break;
+        case Day::Friday:
+            dayStr = "Friday";
+            break;
+        case Day::Saturday:
+            dayStr = "Saturday";
+            break;
+        case Day::Sunday:
+            dayStr = "Sunday";
+            break;
+        }
+        strncpy(temp[i].dayOfWeek, dayStr.c_str(), 14);
+        temp[i].dayOfWeek[14] = '\0';
+
+        strncpy(temp[i].expectedStartTime, LabSchedules[i].getExpectedStartTime().c_str(), 24);
+        temp[i].expectedStartTime[24] = '\0';
+
+        strncpy(temp[i].expectedEndTime, LabSchedules[i].getExpectedEndTime().c_str(), 24);
+        temp[i].expectedEndTime[24] = '\0';
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(ScheduleR) * count);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << count << " Schedules to schedules.bin" << endl;
+}
+
+void DataManager::saveLabSessions() {
+    ofstream file("lab_sessions.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create lab_sessions.bin" << endl;
+        return;
+    }
+
+    int count = LabSessions.size();
+    file.write(reinterpret_cast<const char*>(&count), sizeof(int));
+
+    LabSessionR* temp = new LabSessionR[count];
+    for (int i = 0; i < count; ++i) {
+        strncpy(temp[i].sessionId, LabSessions[i].getSessionID().c_str(), 9);
+        temp[i].sessionId[9] = '\0';
+
+        strncpy(temp[i].sectionId, LabSessions[i].getSection()->getSectionID().c_str(), 9);
+        temp[i].sectionId[9] = '\0';
+
+        strncpy(temp[i].roomId, LabSessions[i].getAssignedRoom()->getRoomID().c_str(), 9);
+        temp[i].roomId[9] = '\0';
+
+        strncpy(temp[i].scheduleId, LabSessions[i].getSchedule()->getScheduleId().c_str(), 9);
+        temp[i].scheduleId[9] = '\0';
+
+        temp[i].weekNumber = stoi(LabSessions[i].getWeekNumber());
+
+        strncpy(temp[i].status, LabSessions[i].getStatus().c_str(), 14);
+        temp[i].status[14] = '\0';
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(LabSessionR) * count);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << count << " LabSessions to lab_sessions.bin" << endl;
 }
