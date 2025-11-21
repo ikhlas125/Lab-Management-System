@@ -95,3 +95,14 @@ struct MakeupR {
     char sectionId[10];
     char sessionId[10];
 };
+
+struct TimeSheetR {
+    char timesheetId[10];
+    char actualStartTime[25];
+    char actualEndTime[25];
+    char attendantId[10];
+    char sessionId[10];
+    char actualDuration[5];
+    char timestamp[25];
+    char status[20];
+};

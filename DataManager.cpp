@@ -600,6 +600,59 @@ void DataManager::loadMakeupRequests() {
     cout << "Loaded " << MakeupRequests.size() << " MakeupRequests." << endl;
 }
 
+void DataManager::loadTimeSheets() {
+    TimeSheets.clear();
+
+    ifstream file("timesheets.bin", ios::binary);
+    if (!file) {
+        cout << "No existing timesheets.bin file found. Starting with empty makeup requests." << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file) {
+        cout << "Error: Could not read count from timesheets.bin" << endl;
+        file.close();
+        return;
+    }
+
+    if (count <= 0) {
+        cout << "No timesheets to load." << endl;
+        file.close();
+        return;
+    }
+
+    TimeSheetR* temp = new TimeSheetR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(TimeSheetR) * count);
+    if (!file) {
+        cout << "Error: Could not read all Timesheets records" << endl;
+        delete[] temp;
+        file.close();
+        return;
+    }
+
+    TimeSheets.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+    for (int i = 0; i < count; ++i) {
+        Attendant* ass = searchByIDAttendant(temp[i].attendantId);
+        LabSession* ess = searchByLabSessionId(temp[i].sessionId);
+        TimeSheets.push_back(TimeSheet(temp[i].timesheetId, temp[i].actualStartTime, temp[i].actualEndTime, ass,
+                                       temp[i].actualDuration, temp[i].timestamp, temp[i].status, ess));
+
+        TimeSheet* timesheetPtr = &TimeSheets.back();
+        if (ass) {
+            ass->addTimesheet(timesheetPtr);
+        }
+        if (ess) {
+            ess->setTimeSheet(timesheetPtr);
+        }
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << TimeSheets.size() << " TimeSheets." << endl;
+}
+
 LabSection* DataManager::searchbyLabSectionId(const string& Id) {
     for (int i = 0; i < LabSections.size(); i++) {
         if (Id == LabSections[i].getSectionID()) {
@@ -674,7 +727,7 @@ Person* DataManager::searchByID(const string& Id) {
 
 Attendant* DataManager::searchByIDAttendant(const string& Id) {
     for (int i = 0; i < Attendants.size(); i++) {
-        if (Id == Attendants[i].getId()) {
+        if (Id == Attendants[i].getAttendantId()) {
             return &Attendants[i];
         }
     }
@@ -777,6 +830,12 @@ void DataManager::printMakeupRequests() const {
     }
 }
 
+void DataManager::printTimeSheets() const {
+    for (const auto& t : TimeSheets) {
+        t.displayInfo();
+    }
+}
+
 vector<Lab>& DataManager::getLabs() {
     return Labs;
 }
@@ -827,6 +886,10 @@ vector<HeadOfDep>& DataManager::getHeadOfDeps() {
 
 vector<MakeupRequest>& DataManager::getMakeupRequests() {
     return MakeupRequests;
+}
+
+vector<TimeSheet>& DataManager::getTimeSheets() {
+    return TimeSheets;
 }
 
 void DataManager::saveLabs() {
@@ -1018,22 +1081,7 @@ void DataManager::saveLabSessions() {
         strncpy(temp[i].scheduleId, LabSessions[i].getSchedule()->getScheduleId().c_str(), 9);
         temp[i].scheduleId[9] = '\0';
 
-        string weekNumStr = LabSessions[i].getWeekNumber();
-        if (weekNumStr.empty()) {
-            temp[i].weekNumber = 0;
-        } else {
-            try {
-                temp[i].weekNumber = stoi(weekNumStr);
-            } catch (const std::invalid_argument& e) {
-                cout << "Warning: Invalid week number '" << weekNumStr << "' for session " 
-                     << LabSessions[i].getSessionID() << ", defaulting to 0" << endl;
-                temp[i].weekNumber = 0;
-            } catch (const std::out_of_range& e) {
-                cout << "Warning: Week number out of range for session " 
-                     << LabSessions[i].getSessionID() << ", defaulting to 0" << endl;
-                temp[i].weekNumber = 0;
-            }
-        }
+        temp[i].weekNumber = stoi(LabSessions[i].getWeekNumber());
 
         strncpy(temp[i].status, LabSessions[i].getStatus().c_str(), 14);
         temp[i].status[14] = '\0';
@@ -1123,4 +1171,48 @@ void DataManager::saveMakeupRequests() {
     file.close();
 
     cout << "Saved " << count << " MakeupsRequests to makeups.bin" << endl;
+}
+
+void DataManager::saveTimeSheets() {
+    ofstream file("timesheets.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create timesheets.bin" << endl;
+        return;
+    }
+
+    int count = TimeSheets.size();
+    file.write(reinterpret_cast<const char*>(&count), sizeof(int));
+
+    TimeSheetR* temp = new TimeSheetR[count];
+    for (int i = 0; i < count; ++i) {
+        strncpy(temp[i].timesheetId, TimeSheets[i].getTimesheetID().c_str(), 9);
+        temp[i].timesheetId[9] = '\0';
+
+        strncpy(temp[i].actualStartTime, TimeSheets[i].getActualStartTime().c_str(), 24);
+        temp[i].actualStartTime[24] = '\0';
+
+        strncpy(temp[i].actualEndTime, TimeSheets[i].getActualEndTime().c_str(), 24);
+        temp[i].actualEndTime[24] = '\0';
+
+        strncpy(temp[i].attendantId, TimeSheets[i].getFilledBy()->getAttendantId().c_str(), 9);
+        temp[i].attendantId[9] = '\0';
+
+        strncpy(temp[i].sessionId, TimeSheets[i].getSession()->getSessionID().c_str(), 9);
+        temp[i].sessionId[9] = '\0';
+
+        strncpy(temp[i].actualDuration, TimeSheets[i].getActualDuration().c_str(), 4);
+        temp[i].actualDuration[4] = '\0';
+
+        strncpy(temp[i].timestamp, TimeSheets[i].getEntryTimestamp().c_str(), 24);
+        temp[i].timestamp[24] = '\0';
+
+        strncpy(temp[i].status, TimeSheets[i].getStatus().c_str(), 19);
+        temp[i].status[19] = '\0';
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(TimeSheetR) * count);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << count << " TimeSheets to timesheets.bin" << endl;
 }

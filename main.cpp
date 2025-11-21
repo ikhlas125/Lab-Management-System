@@ -3,12 +3,14 @@
 #include "LabManager.h"
 #include "MakeupManager.h"
 #include "ScheduleManager.h"
+#include "TimeSheetManager.h"
 
 int main() {
     DataManager dm;
     CountManager cm;
     LabManager lm(&dm, &cm);
     ScheduleManager sm(&dm, &cm);
+    TimeSheetManager tm(&dm, &cm);
     MakeupManager mm(&dm, &sm, &lm, &cm);
     dm.loadPersons();
     dm.loadInstructors();
@@ -23,6 +25,7 @@ int main() {
     dm.loadLabSchedules();
     dm.loadLabSessions();
     dm.loadMakeupRequests();
+    dm.loadTimeSheets();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;
@@ -47,6 +50,8 @@ int main() {
     dm.printLabSessions();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printMakeupRequests();
+    cout << "-------------------------------------------------------------------" << endl;
+    dm.printTimeSheets();
     cm.loadCounts();
     cm.displayCounts();
     cout << "-------------------------------------------------------------------" << endl;
@@ -56,6 +61,7 @@ int main() {
     dm.saveSchedules();
     dm.saveLabSessions();
     dm.saveMakeupRequests();
+    dm.saveTimeSheets();
     cm.saveCounts();
     system("pause");
     return 0;

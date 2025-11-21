@@ -110,4 +110,10 @@ void LabSession::displayInfo() const {
     } else {
         cout << "Schedule: Not Assigned" << endl;
     }
+
+    if (timeSheet) {
+        cout << "TimeSheet: " << timeSheet->getTimesheetID() << " (Status: " << timeSheet->getStatus() << ")" << endl;
+    } else {
+        cout << "TimeSheet: Not Filled" << endl;
+    }
 }

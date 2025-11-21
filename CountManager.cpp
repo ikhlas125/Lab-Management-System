@@ -14,6 +14,7 @@ CountManager::CountManager() {
     counts.academicOfficerCount = 0;
     counts.headOfDepCount = 0;
     counts.makeupRequestCount = 0;
+    counts.timesheetCount = 0;
 
     loadCounts();
 }
@@ -91,6 +92,10 @@ int CountManager::getMakeupRequestCount() const {
     return counts.makeupRequestCount;
 }
 
+int CountManager::getTimesheetCount() const {
+    return counts.timesheetCount;
+}
+
 void CountManager::incrementLabCount() {
     counts.labCount++;
     saveCounts();
@@ -156,6 +161,11 @@ void CountManager::incrementMakeupRequestCount() {
     saveCounts();
 }
 
+void CountManager::incrementTimesheetCount() {
+    counts.timesheetCount++;
+    saveCounts();
+}
+
 void CountManager::displayCounts() const {
     cout << "\n=== Data Counts ===" << endl;
     cout << "Labs: " << counts.labCount << endl;
@@ -171,5 +181,6 @@ void CountManager::displayCounts() const {
     cout << "Academic Officers: " << counts.academicOfficerCount << endl;
     cout << "Head of Departments: " << counts.headOfDepCount << endl;
     cout << "Makeup Requests: " << counts.makeupRequestCount << endl;
+    cout << "Timesheets: " << counts.timesheetCount << endl;
     cout << "===================\n" << endl;
 }

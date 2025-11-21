@@ -4,33 +4,38 @@ using namespace std;
 
 class Attendant;
 class DateTime;
+class LabSession;
 
 class TimeSheet {
   private:
     string timeSheetId;
-    DateTime* actualStartTime;
-    DateTime* actualEndTime;
+    string actualStartTime;
+    string actualEndTime;
     Attendant* filledBy;
+    LabSession* session;
     string actualDuration;
-    DateTime* entryTimestamp;
+    string entryTimestamp;
     string status;
 
   public:
-    TimeSheet(const string& id, const string& stat);
+    TimeSheet(const string& id, const string& startTime, const string& endTime, Attendant* attendant,
+              const string& duration, const string& timestamp, const string& stat, LabSession* sessio);
 
     string getTimesheetID() const;
-    DateTime* getActualStartTime() const;
-    DateTime* getActualEndTime() const;
+    string getActualStartTime() const;
+    string getActualEndTime() const;
     Attendant* getFilledBy() const;
+    LabSession* getSession() const;
     string getActualDuration() const;
-    DateTime* getEntryTimestamp() const;
+    string getEntryTimestamp() const;
     string getStatus() const;
 
-    void setActualStartTime(DateTime* startTime);
-    void setActualEndTime(DateTime* endTime);
+    void setActualStartTime(const string& startTime);
+    void setActualEndTime(const string& endTime);
     void setFilledBy(Attendant* attendant);
+    void setSession(LabSession* sess);
     void setActualDuration(const string& duration);
-    void setEntryTimestamp(DateTime* timestamp);
+    void setEntryTimestamp(const string& timestamp);
     void setStatus(const string& stat);
 
     void calculateActualDuration();

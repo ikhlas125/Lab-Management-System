@@ -11,6 +11,7 @@
 #include "room.h"
 #include "schedule.h"
 #include "ta.h"
+#include "timesheet.h"
 #include <fstream>
 #include <iomanip>
 #include <vector>
@@ -30,6 +31,7 @@ class DataManager {
     vector<Schedule> LabSchedules;
     vector<LabSession> LabSessions;
     vector<MakeupRequest> MakeupRequests;
+    vector<TimeSheet> TimeSheets;
 
   public:
     void loadPersons();
@@ -45,6 +47,7 @@ class DataManager {
     void loadLabSchedules();
     void loadLabSessions();
     void loadMakeupRequests();
+    void loadTimeSheets();
 
     Person* searchByID(const string& Id);
     Attendant* searchByIDAttendant(const string& Id);
@@ -71,6 +74,7 @@ class DataManager {
     vector<AcademicOfficer>& getAcademicOfficers();
     vector<HeadOfDep>& getHeadOfDeps();
     vector<MakeupRequest>& getMakeupRequests();
+    vector<TimeSheet>& getTimeSheets();
 
     void printInstructors() const;
     void printPersons() const;
@@ -85,6 +89,7 @@ class DataManager {
     void printLabSchedules() const;
     void printLabSessions() const;
     void printMakeupRequests() const;
+    void printTimeSheets() const;
 
     void saveLabs();
     void saveLabSections();
@@ -92,4 +97,5 @@ class DataManager {
     void saveSchedules();
     void saveLabSessions();
     void saveMakeupRequests();
+    void saveTimeSheets();
 };
