@@ -26,6 +26,8 @@ void DataManager::loadPersons() {
         return;
     }
 
+    Persons.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+
     for (int i = 0; i < count; ++i) {
         Persons.push_back(
             Person(string(temp[i].id), string(temp[i].name), string(temp[i].email), string(temp[i].phone)));
@@ -59,6 +61,8 @@ void DataManager::loadInstructors() {
         delete[] temp;
         return;
     }
+
+    Instructors.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
 
     for (int i = 0; i < count; ++i) {
         Person* tempo = searchByID(temp[i].personId);
@@ -95,6 +99,8 @@ void DataManager::loadTAs() {
         return;
     }
 
+    TeachingAssistants.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+
     for (int i = 0; i < count; ++i) {
         Person* tempo = searchByID(temp[i].personId);
         TeachingAssistants.push_back(
@@ -103,7 +109,7 @@ void DataManager::loadTAs() {
 
     delete[] temp;
     file.close();
-    cout << "Loaded " << Instructors.size() << " TA." << endl;
+    cout << "Loaded " << TeachingAssistants.size() << " TA." << endl;
 }
 
 void DataManager::loadAcademicOfficers() {
@@ -129,6 +135,8 @@ void DataManager::loadAcademicOfficers() {
         delete[] temp;
         return;
     }
+
+    AcademicOfficers.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
 
     for (int i = 0; i < count; ++i) {
         Person* tempo = searchByID(temp[i].personId);
@@ -165,6 +173,8 @@ void DataManager::loadAttendants() {
         return;
     }
 
+    Attendants.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+
     for (int i = 0; i < count; ++i) {
         Person* tempo = searchByID(temp[i].personId);
         Attendants.push_back(
@@ -200,6 +210,8 @@ void DataManager::loadHeadofDep() {
         return;
     }
 
+    HeadOfDeps.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+
     for (int i = 0; i < count; ++i) {
         Person* tempo = searchByID(temp[i].personId);
         HeadOfDeps.push_back(
@@ -234,6 +246,8 @@ void DataManager::loadBuildings() {
         delete[] temp;
         return;
     }
+
+    Buildings.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
 
     for (int i = 0; i < count; ++i) {
         Attendant* AttendantB = searchByIDAttendant(temp[i].attendantPersonId);
@@ -274,7 +288,7 @@ void DataManager::loadRooms() {
         return;
     }
 
-    Rooms.reserve(count); // Prevent reallocation invalidating pointers
+    Rooms.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
 
     for (int i = 0; i < count; ++i) {
         Rooms.push_back(Room(temp[i].roomId, temp[i].roomNumber, temp[i].capacity, temp[i].floor));
@@ -315,6 +329,8 @@ void DataManager::loadLabs() {
         return;
     }
 
+    Labs.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+
     for (int i = 0; i < count; ++i) {
         Labs.push_back(Lab(temp[i].labId, temp[i].labName, temp[i].labCode, temp[i].credits, temp[i].semester));
     }
@@ -335,8 +351,14 @@ void DataManager::loadLabSections() {
 
     int count = 0;
     file.read(reinterpret_cast<char*>(&count), sizeof(int));
-    if (!file || count <= 0) {
+    if (!file) {
         cout << "Error: Invalid lab_sections.bin format" << endl;
+        return;
+    }
+
+    if (count == 0) {
+        file.close();
+        cout << "Loaded 0 LabSections." << endl;
         return;
     }
 
@@ -347,7 +369,7 @@ void DataManager::loadLabSections() {
         delete[] temp;
         return;
     }
-    LabSections.reserve(count);
+    LabSections.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
     for (int i = 0; i < count; ++i) {
         LabSections.push_back(
             LabSection(temp[i].sectionId, temp[i].sectionNumber, temp[i].semester, temp[i].academicYear));
@@ -364,6 +386,14 @@ void DataManager::loadLabSections() {
     delete[] temp;
     file.close();
     cout << "Loaded " << LabSections.size() << " LabSections." << endl;
+
+    // Clear all existing TA assignments before loading from file to prevent duplicates
+    for (auto& sec : LabSections) {
+        sec.getAssignedTas().clear();
+    }
+    for (auto& ta : TeachingAssistants) {
+        ta.getAssignedSections().clear();
+    }
 
     ifstream taFile("section_tas.bin", ios::binary);
     if (taFile.is_open()) {
@@ -420,6 +450,8 @@ void DataManager::loadLabSchedules() {
         return;
     }
 
+    LabSchedules.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+
     for (int i = 0; i < count; ++i) {
         Day day = Day::Monday;
         string dayStr = temp[i].dayOfWeek;
@@ -457,8 +489,15 @@ void DataManager::loadLabSessions() {
 
     int count = 0;
     file.read(reinterpret_cast<char*>(&count), sizeof(int));
-    if (!file || count <= 0) {
-        cout << "Error: Invalid lab_sessions.bin format" << endl;
+    if (!file) {
+        cout << "Error: Could not read count from lab_sessions.bin" << endl;
+        file.close();
+        return;
+    }
+
+    if (count <= 0) {
+        cout << "No lab sessions to load." << endl;
+        file.close();
         return;
     }
 
@@ -467,10 +506,17 @@ void DataManager::loadLabSessions() {
     if (!file) {
         cout << "Error: Could not read all LabsSessions records" << endl;
         delete[] temp;
+        file.close();
         return;
     }
 
-    LabSessions.reserve(count);
+    LabSessions.reserve(count + 500);
+
+    // Clear all existing sessions from sections to prevent duplicates
+    for (auto& sec : LabSections) {
+        sec.getSessions().clear();
+    }
+
     for (int i = 0; i < count; ++i) {
         LabSessions.push_back(LabSession(temp[i].sessionId, to_string(temp[i].weekNumber), temp[i].status));
         LabSession* LabSessionPtr = &LabSessions.back();
@@ -487,6 +533,71 @@ void DataManager::loadLabSessions() {
     delete[] temp;
     file.close();
     cout << "Loaded " << LabSessions.size() << " LabSessions." << endl;
+}
+
+void DataManager::loadMakeupRequests() {
+    MakeupRequests.clear();
+
+    ifstream file("makeups.bin", ios::binary);
+    if (!file) {
+        cout << "No existing makeups.bin file found. Starting with empty makeup requests." << endl;
+        return;
+    }
+
+    int count = 0;
+    file.read(reinterpret_cast<char*>(&count), sizeof(int));
+    if (!file) {
+        cout << "Error: Could not read count from makeups.bin" << endl;
+        file.close();
+        return;
+    }
+
+    if (count <= 0) {
+        cout << "No makeup requests to load." << endl;
+        file.close();
+        return;
+    }
+
+    MakeupR* temp = new MakeupR[count];
+    file.read(reinterpret_cast<char*>(temp), sizeof(MakeupR) * count);
+    if (!file) {
+        cout << "Error: Could not read all MakeupRequests records" << endl;
+        delete[] temp;
+        file.close();
+        return;
+    }
+
+    MakeupRequests.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
+    for (int i = 0; i < count; ++i) {
+        Day day = Day::Monday;
+        string dayStr = temp[i].RequestedDay;
+        if (dayStr == "Monday")
+            day = Day::Monday;
+        else if (dayStr == "Tuesday")
+            day = Day::Tuesday;
+        else if (dayStr == "Wednesday")
+            day = Day::Wednesday;
+        else if (dayStr == "Thursday")
+            day = Day::Thursday;
+        else if (dayStr == "Friday")
+            day = Day::Friday;
+        else if (dayStr == "Saturday")
+            day = Day::Saturday;
+        else if (dayStr == "Sunday")
+            day = Day::Sunday;
+        Instructor* reqBy = searchByInstructorId(temp[i].instructorId);
+        LabSection* sec = searchbyLabSectionId(temp[i].sectionId);
+        MakeupRequests.push_back(MakeupRequest(temp[i].requestId, reqBy, day, temp[i].requestedStartTime,
+                                               temp[i].requestedEndTime, temp[i].reason, temp[i].status, sec));
+        if (strcmp(temp[i].sessionId, "null") != 0) {
+            MakeupRequest* newly = &MakeupRequests.back();
+            newly->setMakeupSession(searchByLabSessionId(temp[i].sessionId));
+        }
+    }
+
+    delete[] temp;
+    file.close();
+    cout << "Loaded " << MakeupRequests.size() << " MakeupRequests." << endl;
 }
 
 LabSection* DataManager::searchbyLabSectionId(const string& Id) {
@@ -570,6 +681,24 @@ Attendant* DataManager::searchByIDAttendant(const string& Id) {
     return nullptr;
 }
 
+MakeupRequest* DataManager::searchByMakeupId(const string& Id) {
+    for (int i = 0; i < MakeupRequests.size(); i++) {
+        if (Id == MakeupRequests[i].getRequestId()) {
+            return &MakeupRequests[i];
+        }
+    }
+    return nullptr;
+}
+
+LabSession* DataManager::searchByLabSessionId(const string& Id) {
+    for (int i = 0; i < LabSessions.size(); i++) {
+        if (Id == LabSessions[i].getSessionID()) {
+            return &LabSessions[i];
+        }
+    }
+    return nullptr;
+}
+
 void DataManager::printInstructors() const {
     for (const auto& i : Instructors) {
         i.displayInfo();
@@ -642,6 +771,12 @@ void DataManager::printLabSessions() const {
     }
 }
 
+void DataManager::printMakeupRequests() const {
+    for (const auto& m : MakeupRequests) {
+        m.displayInfo();
+    }
+}
+
 vector<Lab>& DataManager::getLabs() {
     return Labs;
 }
@@ -688,6 +823,10 @@ vector<AcademicOfficer>& DataManager::getAcademicOfficers() {
 
 vector<HeadOfDep>& DataManager::getHeadOfDeps() {
     return HeadOfDeps;
+}
+
+vector<MakeupRequest>& DataManager::getMakeupRequests() {
+    return MakeupRequests;
 }
 
 void DataManager::saveLabs() {
@@ -879,7 +1018,22 @@ void DataManager::saveLabSessions() {
         strncpy(temp[i].scheduleId, LabSessions[i].getSchedule()->getScheduleId().c_str(), 9);
         temp[i].scheduleId[9] = '\0';
 
-        temp[i].weekNumber = stoi(LabSessions[i].getWeekNumber());
+        string weekNumStr = LabSessions[i].getWeekNumber();
+        if (weekNumStr.empty()) {
+            temp[i].weekNumber = 0;
+        } else {
+            try {
+                temp[i].weekNumber = stoi(weekNumStr);
+            } catch (const std::invalid_argument& e) {
+                cout << "Warning: Invalid week number '" << weekNumStr << "' for session " 
+                     << LabSessions[i].getSessionID() << ", defaulting to 0" << endl;
+                temp[i].weekNumber = 0;
+            } catch (const std::out_of_range& e) {
+                cout << "Warning: Week number out of range for session " 
+                     << LabSessions[i].getSessionID() << ", defaulting to 0" << endl;
+                temp[i].weekNumber = 0;
+            }
+        }
 
         strncpy(temp[i].status, LabSessions[i].getStatus().c_str(), 14);
         temp[i].status[14] = '\0';
@@ -890,4 +1044,83 @@ void DataManager::saveLabSessions() {
     file.close();
 
     cout << "Saved " << count << " LabSessions to lab_sessions.bin" << endl;
+}
+
+void DataManager::saveMakeupRequests() {
+    ofstream file("makeups.bin", ios::binary);
+    if (!file) {
+        cout << "Error: Cannot create makeups.bin" << endl;
+        return;
+    }
+
+    int count = MakeupRequests.size();
+    file.write(reinterpret_cast<const char*>(&count), sizeof(int));
+
+    MakeupR* temp = new MakeupR[count];
+    for (int i = 0; i < count; ++i) {
+        strncpy(temp[i].requestId, MakeupRequests[i].getRequestId().c_str(), 9);
+        temp[i].requestId[9] = '\0';
+
+        strncpy(temp[i].instructorId, MakeupRequests[i].getRequestedBy()->getInstructorId().c_str(), 9);
+        temp[i].instructorId[9] = '\0';
+
+        Day day = MakeupRequests[i].getRequestedDay();
+        string dayStr;
+        switch (day) {
+        case Day::Monday:
+            dayStr = "Monday";
+            break;
+        case Day::Tuesday:
+            dayStr = "Tuesday";
+            break;
+        case Day::Wednesday:
+            dayStr = "Wednesday";
+            break;
+        case Day::Thursday:
+            dayStr = "Thursday";
+            break;
+        case Day::Friday:
+            dayStr = "Friday";
+            break;
+        case Day::Saturday:
+            dayStr = "Saturday";
+            break;
+        case Day::Sunday:
+            dayStr = "Sunday";
+            break;
+        }
+
+        strncpy(temp[i].RequestedDay, dayStr.c_str(), 19);
+        temp[i].RequestedDay[19] = '\0';
+
+        strncpy(temp[i].requestedStartTime, MakeupRequests[i].getRequestedStartTime().c_str(), 24);
+        temp[i].requestedStartTime[24] = '\0';
+
+        strncpy(temp[i].requestedEndTime, MakeupRequests[i].getRequestedEndTime().c_str(), 24);
+        temp[i].requestedEndTime[24] = '\0';
+
+        strncpy(temp[i].reason, MakeupRequests[i].getReason().c_str(), 19);
+        temp[i].reason[19] = '\0';
+
+        strncpy(temp[i].status, MakeupRequests[i].getStatus().c_str(), 19);
+        temp[i].status[19] = '\0';
+
+        strncpy(temp[i].sectionId, MakeupRequests[i].getRequestedSection()->getSectionID().c_str(), 9);
+        temp[i].sectionId[9] = '\0';
+
+        if (MakeupRequests[i].getMakeupSession() == nullptr) {
+            string ptani = "null";
+            strncpy(temp[i].sessionId, ptani.c_str(), 9);
+            temp[i].sessionId[9] = '\0';
+        } else {
+            strncpy(temp[i].sessionId, MakeupRequests[i].getMakeupSession()->getSessionID().c_str(), 9);
+            temp[i].sessionId[9] = '\0';
+        }
+    }
+
+    file.write(reinterpret_cast<const char*>(temp), sizeof(MakeupR) * count);
+    delete[] temp;
+    file.close();
+
+    cout << "Saved " << count << " MakeupsRequests to makeups.bin" << endl;
 }

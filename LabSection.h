@@ -29,7 +29,9 @@ class LabSection {
     Lab* getLab() const;
     Instructor* getAssignedInstructor() const;
     const vector<TA*>& getAssignedTas() const;
+    vector<TA*>& getAssignedTas();
     const vector<LabSession*>& getSessions() const;
+    vector<LabSession*>& getSessions();
 
     void setSectionName(const string& name);
     void setSemester(const string& sem);

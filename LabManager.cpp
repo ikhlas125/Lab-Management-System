@@ -51,7 +51,7 @@ void LabManager::createLabSession(const string& weekNum, const string& status, L
     int currentCount = DataCount->getLabSessionCount();
     int nextId = currentCount + 1;
     ostringstream oss;
-    oss << "LSES" << setfill('0') << setw(3) << nextId;
+    oss << "SESS" << setfill('0') << setw(3) << nextId;
     string newSessionId = oss.str();
     LabSession newSession(newSessionId, weekNum, status);
     newSession.setSection(section);

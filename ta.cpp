@@ -9,6 +9,10 @@ string TA::getTAId() const {
     return TeachingAssistantId;
 }
 
+vector<LabSection*>& TA::getAssignedSections() {
+    return assignedSections;
+}
+
 void TA::addAssignedSection(LabSection* section) {
     assignedSections.push_back(section);
 }

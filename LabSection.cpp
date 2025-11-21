@@ -37,7 +37,15 @@ const vector<TA*>& LabSection::getAssignedTas() const {
     return assignedTas;
 }
 
+vector<TA*>& LabSection::getAssignedTas() {
+    return assignedTas;
+}
+
 const vector<LabSession*>& LabSection::getSessions() const {
+    return sessions;
+}
+
+vector<LabSession*>& LabSection::getSessions() {
     return sessions;
 }
 

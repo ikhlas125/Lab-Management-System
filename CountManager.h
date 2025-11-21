@@ -16,6 +16,7 @@ struct DataCounts {
     int attendantCount;
     int academicOfficerCount;
     int headOfDepCount;
+    int makeupRequestCount;
 };
 
 class CountManager {
@@ -42,6 +43,7 @@ class CountManager {
     int getAttendantCount() const;
     int getAcademicOfficerCount() const;
     int getHeadOfDepCount() const;
+    int getMakeupRequestCount() const;
 
     void incrementLabCount();
     void incrementLabSectionCount();
@@ -55,6 +57,7 @@ class CountManager {
     void incrementAttendantCount();
     void incrementAcademicOfficerCount();
     void incrementHeadOfDepCount();
+    void incrementMakeupRequestCount();
 
     void displayCounts() const;
 };

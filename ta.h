@@ -11,6 +11,7 @@ class TA : public Person {
   public:
     TA(const string& id, const string& name, const string& email, const string& phone, const string& tid);
     string getTAId() const;
+    vector<LabSection*>& getAssignedSections();
     void addAssignedSection(LabSection* section);
     void displayInfo() const;
 };

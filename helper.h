@@ -83,3 +83,15 @@ struct ScheduleR {
     char expectedStartTime[25];
     char expectedEndTime[25];
 };
+
+struct MakeupR {
+    char requestId[10];
+    char instructorId[10];
+    char RequestedDay[20];
+    char requestedStartTime[25];
+    char requestedEndTime[25];
+    char reason[20];
+    char status[20];
+    char sectionId[10];
+    char sessionId[10];
+};

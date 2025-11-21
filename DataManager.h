@@ -7,6 +7,7 @@
 #include "headOfDep.h"
 #include "helper.h"
 #include "instructor.h"
+#include "makeupLabReq.h"
 #include "room.h"
 #include "schedule.h"
 #include "ta.h"
@@ -28,6 +29,7 @@ class DataManager {
     vector<LabSection> LabSections;
     vector<Schedule> LabSchedules;
     vector<LabSession> LabSessions;
+    vector<MakeupRequest> MakeupRequests;
 
   public:
     void loadPersons();
@@ -42,6 +44,7 @@ class DataManager {
     void loadLabSections();
     void loadLabSchedules();
     void loadLabSessions();
+    void loadMakeupRequests();
 
     Person* searchByID(const string& Id);
     Attendant* searchByIDAttendant(const string& Id);
@@ -52,6 +55,8 @@ class DataManager {
     LabSection* searchbyLabSectionId(const string& Id);
     Room* searchByRoomId(const string& Id);
     Schedule* searchByScheduleId(const string& Id);
+    MakeupRequest* searchByMakeupId(const string& Id);
+    LabSession* searchByLabSessionId(const string& Id);
 
     vector<Lab>& getLabs();
     vector<LabSection>& getLabSections();
@@ -65,6 +70,7 @@ class DataManager {
     vector<Attendant>& getAttendants();
     vector<AcademicOfficer>& getAcademicOfficers();
     vector<HeadOfDep>& getHeadOfDeps();
+    vector<MakeupRequest>& getMakeupRequests();
 
     void printInstructors() const;
     void printPersons() const;
@@ -78,10 +84,12 @@ class DataManager {
     void printLabSections() const;
     void printLabSchedules() const;
     void printLabSessions() const;
+    void printMakeupRequests() const;
 
     void saveLabs();
     void saveLabSections();
     void saveSectionTAs();
     void saveSchedules();
     void saveLabSessions();
+    void saveMakeupRequests();
 };
