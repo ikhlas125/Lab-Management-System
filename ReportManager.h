@@ -5,6 +5,7 @@ using namespace std;
 class DataManager;
 class CountManager;
 class HeadOfDep;
+class LabSection;
 
 class ReportManager {
   private:
@@ -16,5 +17,5 @@ class ReportManager {
 
     void generateWeeklyLabScheduleReport(const string& week, HeadOfDep* genBy, const string& date);
     void generateWeeklyTimeSheetReport(const string& week, HeadOfDep* genBy, const string& date);
-    void generateFullSectionReport(const string& sectionId, HeadOfDep* genBy);
+    void generateFullSectionReport(HeadOfDep* genBy, const string& date, LabSection* section, const string& sem);
 };

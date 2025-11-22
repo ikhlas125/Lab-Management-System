@@ -250,7 +250,7 @@ void DataManager::loadBuildings() {
     Buildings.reserve(count + 500); // Reserve extra capacity to prevent reallocation when adding new items
 
     for (int i = 0; i < count; ++i) {
-        Attendant* AttendantB = searchByIDAttendant(temp[i].attendantPersonId);
+        Attendant* AttendantB = searchByPersonIdAttendant(temp[i].attendantPersonId);
         Buildings.push_back(Building(temp[i].buildingId, temp[i].buildingName, temp[i].address));
         Building* buildingPtr = &Buildings.back();
         buildingPtr->setAssignedAttendant(AttendantB);
@@ -743,6 +743,15 @@ Attendant* DataManager::searchByIDAttendant(const string& Id) {
     return nullptr;
 }
 
+Attendant* DataManager::searchByPersonIdAttendant(const string& personId) {
+    for (int i = 0; i < Attendants.size(); i++) {
+        if (personId == Attendants[i].getId()) {
+            return &Attendants[i];
+        }
+    }
+    return nullptr;
+}
+
 MakeupRequest* DataManager::searchByMakeupId(const string& Id) {
     for (int i = 0; i < MakeupRequests.size(); i++) {
         if (Id == MakeupRequests[i].getRequestId()) {
@@ -779,6 +788,38 @@ vector<TimeSheet*> DataManager::getTimeSheetsByWeekNumber(const string& weekNum)
         if (TimeSheets[i].getSession()) {
             for (const auto& session : sessions) {
                 if (TimeSheets[i].getSession()->getSessionID() == session->getSessionID()) {
+                    timesheets.push_back(&TimeSheets[i]);
+                    break;
+                }
+            }
+        }
+    }
+    return timesheets;
+}
+
+vector<LabSession*> DataManager::getSessionsBySection(LabSection* section) {
+    vector<LabSession*> sessions;
+    if (!section) {
+        return sessions;
+    }
+
+    for (int i = 0; i < LabSessions.size(); i++) {
+        if (LabSessions[i].getSection() && LabSessions[i].getSection()->getSectionID() == section->getSectionID()) {
+            sessions.push_back(&LabSessions[i]);
+        }
+    }
+    return sessions;
+}
+
+vector<TimeSheet*> DataManager::getTimeSheetsBySection(LabSection* section, const string& semester) {
+    vector<TimeSheet*> timesheets;
+    vector<LabSession*> sessions = getSessionsBySection(section);
+
+    for (int i = 0; i < TimeSheets.size(); i++) {
+        if (TimeSheets[i].getSession()) {
+            for (const auto& session : sessions) {
+                if (TimeSheets[i].getSession()->getSessionID() == session->getSessionID() &&
+                    session->getSection()->getSemester() == semester) {
                     timesheets.push_back(&TimeSheets[i]);
                     break;
                 }
@@ -884,6 +925,12 @@ void DataManager::printWeeklyTimeSheetReports() const {
     }
 }
 
+void DataManager::printSemesterLabReports() const {
+    for (const auto& r : SemesterLabReports) {
+        r.print();
+    }
+}
+
 vector<Lab>& DataManager::getLabs() {
     return Labs;
 }
@@ -946,6 +993,10 @@ vector<WeeklyScheduleReport>& DataManager::getWeeklyScheduleReports() {
 
 vector<WeeklyTimeSheetReport>& DataManager::getWeeklyTimeSheetReports() {
     return WeeklyTimeSheetReports;
+}
+
+vector<SemesterLabReport>& DataManager::getSemesterLabReports() {
+    return SemesterLabReports;
 }
 
 void DataManager::saveLabs() {

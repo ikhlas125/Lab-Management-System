@@ -1,17 +1,17 @@
 #include "SemesterLabReport.h"
 
 #include "LabSection.h"
-#include "LabSession.h"
+#include "timesheet.h"
 
 SemesterLabReport::SemesterLabReport(const string& id, HeadOfDep* by, const string& date, LabSection* section)
-    : Report(id, by, date), SectionForReport(section), sessions(), totalContactHours(0), totalLeaves(0) {}
+    : Report(id, by, date), SectionForReport(section), timesheets(), totalContactHours(0), totalLeaves(0) {}
 
 LabSection* SemesterLabReport::getSectionForReport() const {
     return SectionForReport;
 }
 
-const vector<LabSession*>& SemesterLabReport::getSessions() const {
-    return sessions;
+const vector<TimeSheet*>& SemesterLabReport::getTimeSheets() const {
+    return timesheets;
 }
 
 int SemesterLabReport::getTotalContactHours() const {
@@ -34,9 +34,25 @@ void SemesterLabReport::setTotalLeaves(int leaves) {
     totalLeaves = leaves;
 }
 
-void SemesterLabReport::addSession(LabSession* session) {
-    if (session) {
-        sessions.push_back(session);
+void SemesterLabReport::setTimeSheets(const vector<TimeSheet*>& sheets) {
+    timesheets = sheets;
+}
+
+void SemesterLabReport::calculateTotalContactHours() {
+    totalContactHours = 0;
+    for (int i = 0; i < timesheets.size(); i++) {
+        if (timesheets[i]) {
+            totalContactHours += stoi(timesheets[i]->getActualDuration());
+        }
+    }
+}
+
+void SemesterLabReport::calculateTotalLeaves() {
+    totalLeaves = 0;
+    for (int i = 0; i < timesheets.size(); i++) {
+        if (timesheets[i] && timesheets[i]->getStatus() == "Missed") {
+            totalLeaves++;
+        }
     }
 }
 
@@ -52,15 +68,15 @@ void SemesterLabReport::print() const {
         cout << "Section: Not Assigned" << endl;
     }
 
-    cout << "Total Sessions: " << sessions.size() << endl;
+    cout << "Total TimeSheets: " << timesheets.size() << endl;
     cout << "Total Contact Hours: " << totalContactHours << endl;
     cout << "Total Leaves: " << totalLeaves << endl;
-    cout << "\nSessions in Semester:" << endl;
+    cout << "\nTimeSheets in Semester:" << endl;
     cout << "================================" << endl;
 
-    for (const auto& session : sessions) {
-        if (session) {
-            session->displayInfo();
+    for (const auto& timesheet : timesheets) {
+        if (timesheet) {
+            timesheet->displayInfo();
             cout << "--------------------------------" << endl;
         }
     }

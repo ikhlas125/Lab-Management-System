@@ -37,3 +37,20 @@ void ReportManager::generateWeeklyTimeSheetReport(const string& week, HeadOfDep*
     reportPtr->setTimeSheets(timesheets);
     cout << "WeeklyTimeSheetReport " << newReportId << " created successfully" << endl;
 }
+
+void ReportManager::generateFullSectionReport(HeadOfDep* genBy, const string& date, LabSection* section,
+                                              const string& sem) {
+    int currentCount = Data->getSemesterLabReports().size();
+    int nextId = currentCount + 1;
+    ostringstream oss;
+    oss << "FSR" << setfill('0') << setw(3) << nextId;
+    string newReportId = oss.str();
+    SemesterLabReport newReport(newReportId, genBy, date, section);
+    Data->getSemesterLabReports().push_back(newReport);
+    SemesterLabReport* reportPtr = &Data->getSemesterLabReports().back();
+    vector<TimeSheet*> timesheets = Data->getTimeSheetsBySection(section, sem);
+    reportPtr->setTimeSheets(timesheets);
+    reportPtr->calculateTotalContactHours();
+    reportPtr->calculateTotalLeaves();
+    cout << "SemesterLabReport " << newReportId << " created successfully" << endl;
+}

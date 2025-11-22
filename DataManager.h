@@ -1,6 +1,7 @@
 #include "Lab.h"
 #include "LabSection.h"
 #include "LabSession.h"
+#include "SemesterLabReport.h"
 #include "WeeklyScheduleReport.h"
 #include "WeeklyTimeSheetReport.h"
 #include "academicOfficer.h"
@@ -36,6 +37,7 @@ class DataManager {
     vector<TimeSheet> TimeSheets;
     vector<WeeklyScheduleReport> WeeklyScheduleReports;
     vector<WeeklyTimeSheetReport> WeeklyTimeSheetReports;
+    vector<SemesterLabReport> SemesterLabReports;
 
   public:
     void loadPersons();
@@ -55,6 +57,7 @@ class DataManager {
 
     Person* searchByID(const string& Id);
     Attendant* searchByIDAttendant(const string& Id);
+    Attendant* searchByPersonIdAttendant(const string& personId);
     Building* searchByBuildingID(const string& Id);
     Lab* searchByLabId(const string& Id);
     Instructor* searchByInstructorId(const string& Id);
@@ -67,6 +70,8 @@ class DataManager {
     LabSession* searchByLabSessionId(const string& Id);
     vector<LabSession*> getSessionsByWeekNumber(const string& weekNum);
     vector<TimeSheet*> getTimeSheetsByWeekNumber(const string& weekNum);
+    vector<LabSession*> getSessionsBySection(LabSection* section);
+    vector<TimeSheet*> getTimeSheetsBySection(LabSection* section, const string& semester);
 
     vector<Lab>& getLabs();
     vector<LabSection>& getLabSections();
@@ -84,6 +89,7 @@ class DataManager {
     vector<TimeSheet>& getTimeSheets();
     vector<WeeklyScheduleReport>& getWeeklyScheduleReports();
     vector<WeeklyTimeSheetReport>& getWeeklyTimeSheetReports();
+    vector<SemesterLabReport>& getSemesterLabReports();
 
     void printInstructors() const;
     void printPersons() const;
@@ -101,6 +107,7 @@ class DataManager {
     void printTimeSheets() const;
     void printWeeklyScheduleReports() const;
     void printWeeklyTimeSheetReports() const;
+    void printSemesterLabReports() const;
 
     void saveLabs();
     void saveLabSections();

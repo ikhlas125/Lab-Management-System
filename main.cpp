@@ -28,7 +28,8 @@ int main() {
     dm.loadLabSessions();
     dm.loadMakeupRequests();
     dm.loadTimeSheets();
-    rm.generateWeeklyTimeSheetReport("2", dm.searchByHeadOfDepId("HOD001"), "2025-11-22");
+    rm.generateFullSectionReport(dm.searchByHeadOfDepId("HOD001"), "2025-11-23", dm.searchbyLabSectionId("LS002"),
+                                 "Fall2024");
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;
@@ -59,6 +60,8 @@ int main() {
     dm.printWeeklyScheduleReports();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printWeeklyTimeSheetReports();
+    cout << "-------------------------------------------------------------------" << endl;
+    dm.printSemesterLabReports();
     cm.loadCounts();
     cm.displayCounts();
     cout << "-------------------------------------------------------------------" << endl;

@@ -5,12 +5,12 @@ using namespace std;
 #include <vector>
 
 class LabSection;
-class LabSession;
+class TimeSheet;
 
 class SemesterLabReport : public Report {
   private:
     LabSection* SectionForReport;
-    vector<LabSession*> sessions;
+    vector<TimeSheet*> timesheets;
     int totalContactHours;
     int totalLeaves;
 
@@ -18,14 +18,17 @@ class SemesterLabReport : public Report {
     SemesterLabReport(const string& id, HeadOfDep* by, const string& date, LabSection* section);
 
     LabSection* getSectionForReport() const;
-    const vector<LabSession*>& getSessions() const;
+    const vector<TimeSheet*>& getTimeSheets() const;
     int getTotalContactHours() const;
     int getTotalLeaves() const;
 
     void setSectionForReport(LabSection* section);
     void setTotalContactHours(int hours);
     void setTotalLeaves(int leaves);
-    void addSession(LabSession* session);
+    void setTimeSheets(const vector<TimeSheet*>& sheets);
+
+    void calculateTotalContactHours();
+    void calculateTotalLeaves();
 
     void print() const override;
 };
