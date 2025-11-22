@@ -7,5 +7,8 @@ class HeadOfDep : public Person {
 
   public:
     HeadOfDep(const string& id, const string& name, const string& email, const string& phone, const string& hodid);
+
+    string getHODId() const;
+
     void displayInfo() const;
 };

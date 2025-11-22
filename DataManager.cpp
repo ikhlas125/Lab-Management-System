@@ -680,6 +680,15 @@ TA* DataManager::searchByTAId(const string& Id) {
     return nullptr;
 }
 
+HeadOfDep* DataManager::searchByHeadOfDepId(const string& Id) {
+    for (int i = 0; i < HeadOfDeps.size(); i++) {
+        if (Id == HeadOfDeps[i].getHODId()) {
+            return &HeadOfDeps[i];
+        }
+    }
+    return nullptr;
+}
+
 Room* DataManager::searchByRoomId(const string& Id) {
     for (int i = 0; i < Rooms.size(); i++) {
         if (Id == Rooms[i].getRoomID()) {
@@ -750,6 +759,33 @@ LabSession* DataManager::searchByLabSessionId(const string& Id) {
         }
     }
     return nullptr;
+}
+
+vector<LabSession*> DataManager::getSessionsByWeekNumber(const string& weekNum) {
+    vector<LabSession*> sessions;
+    for (int i = 0; i < LabSessions.size(); i++) {
+        if (LabSessions[i].getWeekNumber() == weekNum) {
+            sessions.push_back(&LabSessions[i]);
+        }
+    }
+    return sessions;
+}
+
+vector<TimeSheet*> DataManager::getTimeSheetsByWeekNumber(const string& weekNum) {
+    vector<TimeSheet*> timesheets;
+    vector<LabSession*> sessions = getSessionsByWeekNumber(weekNum);
+
+    for (int i = 0; i < TimeSheets.size(); i++) {
+        if (TimeSheets[i].getSession()) {
+            for (const auto& session : sessions) {
+                if (TimeSheets[i].getSession()->getSessionID() == session->getSessionID()) {
+                    timesheets.push_back(&TimeSheets[i]);
+                    break;
+                }
+            }
+        }
+    }
+    return timesheets;
 }
 
 void DataManager::printInstructors() const {
@@ -836,6 +872,18 @@ void DataManager::printTimeSheets() const {
     }
 }
 
+void DataManager::printWeeklyScheduleReports() const {
+    for (const auto& r : WeeklyScheduleReports) {
+        r.print();
+    }
+}
+
+void DataManager::printWeeklyTimeSheetReports() const {
+    for (const auto& r : WeeklyTimeSheetReports) {
+        r.print();
+    }
+}
+
 vector<Lab>& DataManager::getLabs() {
     return Labs;
 }
@@ -890,6 +938,14 @@ vector<MakeupRequest>& DataManager::getMakeupRequests() {
 
 vector<TimeSheet>& DataManager::getTimeSheets() {
     return TimeSheets;
+}
+
+vector<WeeklyScheduleReport>& DataManager::getWeeklyScheduleReports() {
+    return WeeklyScheduleReports;
+}
+
+vector<WeeklyTimeSheetReport>& DataManager::getWeeklyTimeSheetReports() {
+    return WeeklyTimeSheetReports;
 }
 
 void DataManager::saveLabs() {

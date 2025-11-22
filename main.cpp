@@ -2,6 +2,7 @@
 #include "DataManager.h"
 #include "LabManager.h"
 #include "MakeupManager.h"
+#include "ReportManager.h"
 #include "ScheduleManager.h"
 #include "TimeSheetManager.h"
 
@@ -12,6 +13,7 @@ int main() {
     ScheduleManager sm(&dm, &cm);
     TimeSheetManager tm(&dm, &cm);
     MakeupManager mm(&dm, &sm, &lm, &cm);
+    ReportManager rm(&dm, &cm);
     dm.loadPersons();
     dm.loadInstructors();
     dm.loadTAs();
@@ -26,6 +28,7 @@ int main() {
     dm.loadLabSessions();
     dm.loadMakeupRequests();
     dm.loadTimeSheets();
+    rm.generateWeeklyTimeSheetReport("2", dm.searchByHeadOfDepId("HOD001"), "2025-11-22");
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;
@@ -52,6 +55,10 @@ int main() {
     dm.printMakeupRequests();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printTimeSheets();
+    cout << "-------------------------------------------------------------------" << endl;
+    dm.printWeeklyScheduleReports();
+    cout << "-------------------------------------------------------------------" << endl;
+    dm.printWeeklyTimeSheetReports();
     cm.loadCounts();
     cm.displayCounts();
     cout << "-------------------------------------------------------------------" << endl;
