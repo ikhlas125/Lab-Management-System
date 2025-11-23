@@ -1,6 +1,9 @@
 #pragma once
+#include "schedule.h"
 #include <iostream>
+
 using namespace std;
+#include <vector>
 
 class DataManager;
 class CountManager;
@@ -10,6 +13,7 @@ class TA;
 class LabSection;
 class Schedule;
 class Room;
+class Lab;
 
 class LabManager {
   private:
@@ -20,9 +24,12 @@ class LabManager {
     LabManager(DataManager* dm, CountManager* dc);
 
     void addLabs(const string& name, const string& code, int cred, const string& sem);
-    void addLabSections(const string& name, const string& sem, const string& year, Lab* lab,
-                        Instructor* assignInstructor);
+    void addLabSections(const string& name, const string& year, Lab* lab, Instructor* assignInstructor);
     void assignTAs(TA* TaAssigned, LabSection* assignTo);
     void createLabSession(const string& weekNum, const string& status, LabSection* section, Schedule* schedule,
                           Room* room);
+    bool isClashless(Day day, const string& startTime, const string& endTime, Room* room);
+
+    vector<Lab>& getLabs();
+    vector<LabSection>& getLabSections();
 };

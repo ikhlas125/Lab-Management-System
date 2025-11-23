@@ -40,6 +40,7 @@ void Lab::setSemester(const string& sem) {
 }
 
 void Lab::displayInfo() const {
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "Labs Information: " << endl;
     cout << "Lab ID: " << labId << endl;
     cout << "Lab Name: " << labName << endl;

@@ -1,3 +1,4 @@
+#include "AcademicOfficerMenu.h"
 #include "CountManager.h"
 #include "DataManager.h"
 #include "LabManager.h"
@@ -28,8 +29,8 @@ int main() {
     dm.loadLabSessions();
     dm.loadMakeupRequests();
     dm.loadTimeSheets();
-    rm.generateFullSectionReport(dm.searchByHeadOfDepId("HOD001"), "2025-11-23", dm.searchbyLabSectionId("LS002"),
-                                 "Fall2024");
+    AcademicOfficerMenu aom(&lm, &sm, &dm);
+    aom.show();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;

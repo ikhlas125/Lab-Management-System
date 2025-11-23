@@ -2,6 +2,7 @@
 
 #include "CountManager.h"
 #include "DataManager.h"
+#include "room.h"
 #include "schedule.h"
 #include <iomanip>
 #include <sstream>

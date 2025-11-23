@@ -82,6 +82,7 @@ void LabSection::addSession(LabSession* session) {
 }
 
 void LabSection::displayInfo() const {
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "Lab Section Information:" << endl;
     cout << "Section ID: " << sectionID << endl;
     cout << "Section Name: " << sectionName << endl;
