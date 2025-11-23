@@ -2,6 +2,8 @@
 
 #include "LabSection.h"
 #include "timesheet.h"
+#include <string>
+
 
 SemesterLabReport::SemesterLabReport(const string& id, HeadOfDep* by, const string& date, LabSection* section)
     : Report(id, by, date), SectionForReport(section), timesheets(), totalContactHours(0), totalLeaves(0) {}

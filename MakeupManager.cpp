@@ -6,6 +6,10 @@
 #include "ScheduleManager.h"
 #include "instructor.h"
 #include "makeupLabReq.h"
+#include <string>
+#include <sstream>
+#include <iomanip>
+
 
 MakeupManager::MakeupManager(DataManager* dm, ScheduleManager* sm, LabManager* lm, CountManager* cm)
     : Data(dm), ScheduleMgr(sm), LabMgr(lm), DataCount(cm) {}

@@ -212,11 +212,17 @@ void AcademicOfficerMenu::show() {
                     if (request) {
                         string roomId, week;
                         cout << "Enter Room Id: ";
-                        cin.ignore();
                         getline(cin, roomId);
                         cout << "Enter WeekNumber: ";
                         getline(cin, week);
-                        makMgr->reviewMakeupRequest(request->getRequestId(), roomId, week);
+                        Room* room = dataMgr->searchByRoomId(roomId);
+                        if (room) {
+                            makMgr->reviewMakeupRequest(request->getRequestId(), room->getRoomID(), week);
+                        } else {
+                            cout << "Room does not exist." << endl;
+                        }
+                        cout << "Room Id: " << roomId << " WeekNumber:" << week << endl;
+
                     } else {
                         cout << "Request does not exist" << endl;
                     }
