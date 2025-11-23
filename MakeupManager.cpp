@@ -23,20 +23,25 @@ void MakeupManager::submitMakeupRequest(Instructor* requestBy, Day day, const st
     cout << "MakeupRequest added successfully with ID: " << newMakeupId << endl;
 }
 
-void MakeupManager::approveMakeupRequest(const string& requestId, const string& roomId, const string& weeknum) {
+void MakeupManager::reviewMakeupRequest(const string& requestId, const string& roomId, const string& weeknum) {
     MakeupRequest* request = Data->searchByMakeupId(requestId);
     if (!request || request->getStatus() != "Pending") {
         return;
     }
 
-    ScheduleMgr->createSchedule(request->getRequestedDay(), request->getRequestedStartTime(),
-                                request->getRequestedEndTime());
-    Schedule* MakeupSchedule = &Data->getSchedules().back();
-    LabMgr->createLabSession(weeknum, "Makeup", request->getRequestedSection(), MakeupSchedule,
-                             Data->searchByRoomId(roomId));
-    LabSession* makeupSession = &Data->getLabSessions().back();
-    request->setStatus("Approved");
-    request->setMakeupSession(makeupSession);
+    if (LabMgr->isClashless(request->getRequestedDay(), request->getRequestedStartTime(),
+                            request->getRequestedEndTime(), Data->searchByRoomId(roomId))) {
+        ScheduleMgr->createSchedule(request->getRequestedDay(), request->getRequestedStartTime(),
+                                    request->getRequestedEndTime());
+        Schedule* MakeupSchedule = &Data->getSchedules().back();
+        LabMgr->createLabSession(weeknum, "Makeup", request->getRequestedSection(), MakeupSchedule,
+                                 Data->searchByRoomId(roomId));
+        LabSession* makeupSession = &Data->getLabSessions().back();
+        request->setStatus("Approved");
+        request->setMakeupSession(makeupSession);
+    } else {
+        rejectMakeupRequest(requestId);
+    }
 }
 
 void MakeupManager::rejectMakeupRequest(const string& requestId) {
@@ -48,4 +53,8 @@ void MakeupManager::rejectMakeupRequest(const string& requestId) {
 
     request->setStatus("Rejected");
     cout << "Makeup request " << requestId << " has been rejected." << endl;
+}
+
+vector<MakeupRequest>& MakeupManager::getMakeupRequests() {
+    return Data->getMakeupRequests();
 }

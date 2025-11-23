@@ -32,6 +32,7 @@ void Schedule::setExpectedEndTime(const string& endTime) {
 }
 
 void Schedule::displayInfo() const {
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "Schedule Information:" << endl;
     cout << "Schedule ID:" << scheduleId << endl;
 

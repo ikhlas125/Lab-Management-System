@@ -2,10 +2,13 @@
 
 #include "DataManager.h"
 #include "LabManager.h"
+#include "MakeupManager.h"
 #include "ScheduleManager.h"
+#include <string>
 
-AcademicOfficerMenu::AcademicOfficerMenu(LabManager* labMgr, ScheduleManager* schedMgr, DataManager* dataMgr)
-    : labMgr(labMgr), schedMgr(schedMgr), dataMgr(dataMgr) {}
+AcademicOfficerMenu::AcademicOfficerMenu(LabManager* labMgr, ScheduleManager* schedMgr, DataManager* dataMgr,
+                                         MakeupManager* makMgr)
+    : labMgr(labMgr), schedMgr(schedMgr), dataMgr(dataMgr), makMgr(makMgr) {}
 
 void AcademicOfficerMenu::show() {
     int choice = 0;
@@ -144,17 +147,35 @@ void AcademicOfficerMenu::show() {
             cout << "  Enter your choice: ";
             cin >> subChoice;
             if (subChoice == 1) {
-                string day, startTime, endTime;
+                string ay, startTime, endTime;
                 cout << "Enter Day (e.g., Monday): ";
                 cin.ignore();
-                getline(cin, day);
-                cout << "Enter Start Time (e.g., 09:00): ";
-                getline(cin, startTime);
-                cout << "Enter End Time (e.g., 11:00): ";
-                getline(cin, endTime);
+                getline(cin, ay);
+                Day day = Day::Monday;
+                string dayStr = ay;
+                if (dayStr == "Monday")
+                    day = Day::Monday;
+                else if (dayStr == "Tuesday")
+                    day = Day::Tuesday;
+                else if (dayStr == "Wednesday")
+                    day = Day::Wednesday;
+                else if (dayStr == "Thursday")
+                    day = Day::Thursday;
+                else if (dayStr == "Friday")
+                    day = Day::Friday;
+                else if (dayStr == "Saturday")
+                    day = Day::Saturday;
+                else if (dayStr == "Sunday")
+                    day = Day::Sunday;
+                inputStartEndTime(startTime, endTime);
+                schedMgr->createSchedule(day, startTime, endTime);
                 cout << "[Create Schedule selected]" << endl;
-                cout << "Day: " << day << ", Start: " << startTime << ", End: " << endTime << endl;
+                cout << "Day: " << dayToString(day) << ", Start: " << startTime << ", End: " << endTime << endl;
             } else if (subChoice == 2) {
+                vector<Schedule> schedules = schedMgr->getSchedules();
+                for (const auto& s : schedules) {
+                    s.displayInfo();
+                }
                 cout << "[View All Schedules selected]" << endl;
             } else {
                 cout << "Invalid sub-option." << endl;
@@ -162,13 +183,45 @@ void AcademicOfficerMenu::show() {
         } else if (choice == 5) {
             int subChoice;
             cout << "\n  1. View Makeup Requests from Instructors" << endl;
-            cout << "  2. Schedule Makeup Lab Session (creates planned session)" << endl;
+            cout << "  2. Review Makeup Requests" << endl;
             cout << "  Enter your choice: ";
             cin >> subChoice;
             if (subChoice == 1) {
+                vector<MakeupRequest> makeups = makMgr->getMakeupRequests();
+                for (const auto& m : makeups) {
+                    m.displayInfo();
+                }
                 cout << "[View Makeup Requests from Instructors selected]" << endl;
             } else if (subChoice == 2) {
-                cout << "[Schedule Makeup Lab Session selected]" << endl;
+                vector<MakeupRequest> makeups = makMgr->getMakeupRequests();
+                bool found = false;
+                for (const auto& m : makeups) {
+                    if (m.getStatus() == "Pending") {
+                        m.displayInfo();
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    cout << "No pending makeup requests found." << endl;
+                } else {
+                    string requestId;
+                    cout << "Enter Request Id: ";
+                    cin.ignore();
+                    getline(cin, requestId);
+                    MakeupRequest* request = dataMgr->searchByMakeupId(requestId);
+                    if (request) {
+                        string roomId, week;
+                        cout << "Enter Room Id: ";
+                        cin.ignore();
+                        getline(cin, roomId);
+                        cout << "Enter WeekNumber: ";
+                        getline(cin, week);
+                        makMgr->reviewMakeupRequest(request->getRequestId(), roomId, week);
+                    } else {
+                        cout << "Request does not exist" << endl;
+                    }
+                }
+                cout << "[Review Makeup Requests selected]" << endl;
             } else {
                 cout << "Invalid sub-option." << endl;
             }

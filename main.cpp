@@ -29,8 +29,8 @@ int main() {
     dm.loadLabSessions();
     dm.loadMakeupRequests();
     dm.loadTimeSheets();
-    AcademicOfficerMenu aom(&lm, &sm, &dm);
-    aom.show();
+    // AcademicOfficerMenu aom(&lm, &sm, &dm, &mm);
+    // aom.show();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;

@@ -1,3 +1,11 @@
+#include "schedule.h"
+#include <string>
+using namespace std;
+
+string buildDateTime(int y, int m, int d, int hh, int mm);
+string dayToString(Day day);
+void inputStartEndTime(string& startDT, string& endDT);
+
 struct PersonRecord {
     char id[10];
     char name[50];

@@ -2,6 +2,7 @@
 #include "schedule.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class DataManager;
@@ -17,4 +18,6 @@ class ScheduleManager {
     ScheduleManager(DataManager* dm, CountManager* cm);
 
     void createSchedule(Day day, const string& startTime, const string& endTime);
+
+    vector<Schedule>& getSchedules();
 };

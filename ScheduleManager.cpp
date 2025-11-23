@@ -20,3 +20,7 @@ void ScheduleManager::createSchedule(Day day, const string& startTime, const str
     DataCount->incrementScheduleCount();
     cout << "Schedule " << newScheduleId << " created successfully" << endl;
 }
+
+vector<Schedule>& ScheduleManager::getSchedules() {
+    return Data->getSchedules();
+}

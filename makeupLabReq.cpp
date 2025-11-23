@@ -75,6 +75,7 @@ void MakeupRequest::setMakeupSession(LabSession* session) {
 
 void MakeupRequest::displayInfo() const {
     cout << "======= Makeup Request Information =======" << endl;
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "Request ID: " << requestId << endl;
     cout << "Status: " << status << endl;
     cout << "Reason: " << reason << endl;
