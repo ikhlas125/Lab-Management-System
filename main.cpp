@@ -1,4 +1,5 @@
 #include "AcademicOfficerMenu.h"
+#include "AttendantMenu.h"
 #include "CountManager.h"
 #include "DataManager.h"
 #include "LabManager.h"
@@ -29,8 +30,10 @@ int main() {
     dm.loadLabSessions();
     dm.loadMakeupRequests();
     dm.loadTimeSheets();
-    AcademicOfficerMenu aom(&lm, &sm, &dm, &mm);
-    aom.show();
+    // AcademicOfficerMenu aom(&lm, &sm, &dm, &mm);
+    AttendantMenu am(&tm, &lm, &dm);
+    am.show();
+    // aom.show();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;

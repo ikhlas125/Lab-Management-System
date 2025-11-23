@@ -83,6 +83,7 @@ void TimeSheet::calculateActualDuration() {
 }
 
 void TimeSheet::displayInfo() const {
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "TimeSheet Information:" << endl;
     cout << "TimeSheet ID: " << timeSheetId << endl;
     cout << "Actual Duration: " << actualDuration << endl;

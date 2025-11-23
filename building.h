@@ -25,4 +25,5 @@ class Building {
     void setBuildingLocation(const string& location);
     void setAssignedAttendant(Attendant* attendant);
     void displayInfo() const;
+    vector<Room*>& getAssignedRooms();
 };

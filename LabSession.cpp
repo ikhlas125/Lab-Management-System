@@ -62,6 +62,7 @@ void LabSession::setStatus(const string& stat) {
 }
 
 void LabSession::displayInfo() const {
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "Lab Session Information:" << endl;
     cout << "Session ID: " << sessionID << endl;
     cout << "Week Number: " << WeekNumber << endl;

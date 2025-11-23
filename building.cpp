@@ -34,7 +34,12 @@ void Building::addRoom(Room* room) {
     assignedRooms.push_back(room);
 }
 
+vector<Room*>& Building::getAssignedRooms() {
+    return assignedRooms;
+}
+
 void Building::displayInfo() const {
+    cout << "-------------------------------------------------------------------" << endl;
     cout << "Building Information:" << endl;
     cout << "Building ID: " << buildingID << endl;
     cout << "Building Name: " << buildingName << endl;
@@ -57,4 +62,5 @@ void Building::displayInfo() const {
     } else {
         cout << "Rooms in this Building: None" << endl;
     }
+    cout << "-------------------------------------------------------------------" << endl;
 }
