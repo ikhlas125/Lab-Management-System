@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Report on software metrics-->
+<CCCC_Project>
+<timestamp>Mon Nov 24 00:50:37 2025
+</timestamp>
+<project_summary>
+<number_of_modules value="34" level="0" />
+<lines_of_code value="3881" level="0" />
+<lines_of_code_per_module value="114.147" level="0" />
+<McCabes_cyclomatic_complexity value="642" level="0" />
+<McCabes_cyclomatic_complexity_per_module value="18.882" level="0" />
+<lines_of_comment value="49" level="0" />
+<lines_of_comment_per_module value="1.441" level="0" />
+<lines_of_code_per_line_of_comment value="79.204" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="13.102" level="2" />
+<IF4 value="6902" level="0" />
+<IF4_per_module value="203.000" level="0" />
+<IF4_visible value="5307" level="0" />
+<IF4_visible_per_module value="156.088" level="0" />
+<IF4_concrete value="34" level="0" />
+<IF4_concrete value="1.000" level="0" />
+<rejected_lines_of_code value="89" level="0" />
+</project_summary>
+<procedural_summary>
+<module>
+<name>AcademicOfficer</name>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>AcademicOfficerMenu</name>
+<lines_of_code value="239" level="0" />
+<McCabes_cyclomatic_complexity value="40" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Attendant</name>
+<lines_of_code value="64" level="0" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>AttendantMenu</name>
+<lines_of_code value="116" level="0" />
+<McCabes_cyclomatic_complexity value="21" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="116.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="21.000" level="2" />
+</module>
+<module>
+<name>Building</name>
+<lines_of_code value="70" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>CountManager</name>
+<lines_of_code value="195" level="0" />
+<McCabes_cyclomatic_complexity value="16" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>DataManager</name>
+<lines_of_code value="1191" level="1" />
+<McCabes_cyclomatic_complexity value="298" level="1" />
+<lines_of_comment value="15" level="0" />
+<lines_of_code_per_line_of_comment value="79.400" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="19.867" level="2" />
+</module>
+<module>
+<name>DateTime</name>
+<lines_of_code value="156" level="0" />
+<McCabes_cyclomatic_complexity value="41" level="0" />
+<lines_of_comment value="22" level="0" />
+<lines_of_code_per_line_of_comment value="7.091" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.864" level="0" />
+</module>
+<module>
+<name>Day</name>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>HeadOfDep</name>
+<lines_of_code value="20" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>HeadOfDepMenu</name>
+<lines_of_code value="84" level="0" />
+<McCabes_cyclomatic_complexity value="11" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Instructor</name>
+<lines_of_code value="43" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="43.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="6.000" level="1" />
+</module>
+<module>
+<name>InstructureMenu</name>
+<lines_of_code value="117" level="0" />
+<McCabes_cyclomatic_complexity value="26" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="117.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="26.000" level="2" />
+</module>
+<module>
+<name>Lab</name>
+<lines_of_code value="60" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+</module>
+<module>
+<name>LabManager</name>
+<lines_of_code value="89" level="0" />
+<McCabes_cyclomatic_complexity value="12" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>LabSection</name>
+<lines_of_code value="142" level="0" />
+<McCabes_cyclomatic_complexity value="22" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>LabSession</name>
+<lines_of_code value="127" level="0" />
+<McCabes_cyclomatic_complexity value="19" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>MakeupManager</name>
+<lines_of_code value="60" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>MakeupRequest</name>
+<lines_of_code value="135" level="0" />
+<McCabes_cyclomatic_complexity value="20" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Person</name>
+<lines_of_code value="49" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>Report</name>
+<lines_of_code value="22" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>ReportManager</name>
+<lines_of_code value="53" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>Room</name>
+<lines_of_code value="59" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>Schedule</name>
+<lines_of_code value="71" level="0" />
+<McCabes_cyclomatic_complexity value="12" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>ScheduleManager</name>
+<lines_of_code value="25" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>SemesterLabReport</name>
+<lines_of_code value="83" level="0" />
+<McCabes_cyclomatic_complexity value="12" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</module>
+<module>
+<name>TA</name>
+<lines_of_code value="39" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+</module>
+<module>
+<name>TimeSheet</name>
+<lines_of_code value="119" level="0" />
+<McCabes_cyclomatic_complexity value="15" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="59.500" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="7.500" level="1" />
+</module>
+<module>
+<name>TimeSheetManager</name>
+<lines_of_code value="31" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>WeeklyScheduleReport</name>
+<lines_of_code value="40" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>WeeklyTimeSheetReport</name>
+<lines_of_code value="40" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>anonymous</name>
+<lines_of_code value="122" level="0" />
+<McCabes_cyclomatic_complexity value="11" level="0" />
+<lines_of_comment value="7" level="0" />
+<lines_of_code_per_line_of_comment value="17.429" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.571" level="0" />
+</module>
+<module>
+<name>string</name>
+<lines_of_code value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+<module>
+<name>vector</name>
+<lines_of_code value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module>
+</procedural_summary>
+<oo_design>
+<module>
+<name>AcademicOfficer</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="2" level="0" />
+</module>
+<module>
+<name>AcademicOfficerMenu</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="4" level="0" />
+</module>
+<module>
+<name>Attendant</name>
+<weighted_methods_per_class_unity value="8" level="0" />
+<weighted_methods_per_class_visibility value="8" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="8" level="0" />
+</module>
+<module>
+<name>AttendantMenu</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>Building</name>
+<weighted_methods_per_class_unity value="10" level="0" />
+<weighted_methods_per_class_visibility value="10" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>CountManager</name>
+<weighted_methods_per_class_unity value="32" level="1" />
+<weighted_methods_per_class_visibility value="32" level="2" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>DataManager</name>
+<weighted_methods_per_class_unity value="72" level="1" />
+<weighted_methods_per_class_visibility value="72" level="2" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="12" level="0" />
+</module>
+<module>
+<name>DateTime</name>
+<weighted_methods_per_class_unity value="22" level="0" />
+<weighted_methods_per_class_visibility value="20" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="0" level="0" />
+</module>
+<module>
+<name>Day</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>HeadOfDep</name>
+<weighted_methods_per_class_unity value="3" level="0" />
+<weighted_methods_per_class_visibility value="3" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="7" level="0" />
+</module>
+<module>
+<name>HeadOfDepMenu</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="2" level="0" />
+</module>
+<module>
+<name>Instructor</name>
+<weighted_methods_per_class_unity value="5" level="0" />
+<weighted_methods_per_class_visibility value="5" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="8" level="0" />
+</module>
+<module>
+<name>InstructureMenu</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>Lab</name>
+<weighted_methods_per_class_unity value="11" level="0" />
+<weighted_methods_per_class_visibility value="11" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+</module>
+<module>
+<name>LabManager</name>
+<weighted_methods_per_class_unity value="8" level="0" />
+<weighted_methods_per_class_visibility value="8" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="14" level="1" />
+</module>
+<module>
+<name>LabSection</name>
+<weighted_methods_per_class_unity value="17" level="0" />
+<weighted_methods_per_class_visibility value="17" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="15" level="1" />
+</module>
+<module>
+<name>LabSession</name>
+<weighted_methods_per_class_unity value="15" level="0" />
+<weighted_methods_per_class_visibility value="15" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="9" level="0" />
+</module>
+<module>
+<name>MakeupManager</name>
+<weighted_methods_per_class_unity value="5" level="0" />
+<weighted_methods_per_class_visibility value="5" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="10" level="0" />
+</module>
+<module>
+<name>MakeupRequest</name>
+<weighted_methods_per_class_unity value="18" level="0" />
+<weighted_methods_per_class_visibility value="18" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>Person</name>
+<weighted_methods_per_class_unity value="10" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="5" level="1" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>Report</name>
+<weighted_methods_per_class_unity value="5" level="0" />
+<weighted_methods_per_class_visibility value="5" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="3" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>ReportManager</name>
+<weighted_methods_per_class_unity value="4" level="0" />
+<weighted_methods_per_class_visibility value="4" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>Room</name>
+<weighted_methods_per_class_unity value="10" level="0" />
+<weighted_methods_per_class_visibility value="10" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>Schedule</name>
+<weighted_methods_per_class_unity value="9" level="0" />
+<weighted_methods_per_class_visibility value="9" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="4" level="0" />
+</module>
+<module>
+<name>ScheduleManager</name>
+<weighted_methods_per_class_unity value="3" level="0" />
+<weighted_methods_per_class_visibility value="3" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>SemesterLabReport</name>
+<weighted_methods_per_class_unity value="12" level="0" />
+<weighted_methods_per_class_visibility value="11" level="1" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>TA</name>
+<weighted_methods_per_class_unity value="5" level="0" />
+<weighted_methods_per_class_visibility value="5" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>TimeSheet</name>
+<weighted_methods_per_class_unity value="18" level="0" />
+<weighted_methods_per_class_visibility value="18" level="1" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+</module>
+<module>
+<name>TimeSheetManager</name>
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+</module>
+<module>
+<name>WeeklyScheduleReport</name>
+<weighted_methods_per_class_unity value="6" level="0" />
+<weighted_methods_per_class_visibility value="5" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="4" level="0" />
+</module>
+<module>
+<name>WeeklyTimeSheetReport</name>
+<weighted_methods_per_class_unity value="6" level="0" />
+<weighted_methods_per_class_visibility value="5" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="4" level="0" />
+</module>
+<module>
+<name>anonymous</name>
+<weighted_methods_per_class_unity value="4" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="0" level="0" />
+</module>
+<module>
+<name>string</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="25" level="1" />
+</module>
+<module>
+<name>vector</name>
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="9" level="0" />
+</module>
+</oo_design>
+<structural_summary>
+<module>
+<name>AcademicOfficer</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="2" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>AcademicOfficerMenu</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Attendant</name>
+<fan_out_visible value="3" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="3" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="5" level="0" />
+<IF4_visible value="144" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="225" level="1" />
+</module>
+<module>
+<name>AttendantMenu</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="3" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Building</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="64" level="0" />
+</module>
+<module>
+<name>CountManager</name>
+<fan_out_visible value="5" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="5" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="1" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="25" level="0" />
+</module>
+<module>
+<name>DataManager</name>
+<fan_out_visible value="9" level="1" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="9" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="3" level="0" />
+<IF4_visible value="324" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="729" level="1" />
+</module>
+<module>
+<name>DateTime</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Day</name>
+<fan_out_visible value="5" level="0" />
+<fan_out_concrete value="5" level="0" />
+<fan_out value="5" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>HeadOfDep</name>
+<fan_out_visible value="5" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="5" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="2" level="0" />
+<IF4_visible value="100" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="100" level="0" />
+</module>
+<module>
+<name>HeadOfDepMenu</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="2" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Instructor</name>
+<fan_out_visible value="4" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="4" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="144" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="256" level="1" />
+</module>
+<module>
+<name>InstructureMenu</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="3" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Lab</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="1" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="1" level="0" />
+<IF4_visible value="4" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="4" level="0" />
+</module>
+<module>
+<name>LabManager</name>
+<fan_out_visible value="4" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="4" level="0" />
+<fan_in_visible value="10" level="1" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="10" level="0" />
+<IF4_visible value="1600" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="1600" level="2" />
+</module>
+<module>
+<name>LabSection</name>
+<fan_out_visible value="9" level="1" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="9" level="0" />
+<fan_in_visible value="5" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="6" level="0" />
+<IF4_visible value="2025" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="2916" level="2" />
+</module>
+<module>
+<name>LabSession</name>
+<fan_out_visible value="4" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="4" level="0" />
+<fan_in_visible value="5" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="5" level="0" />
+<IF4_visible value="400" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="400" level="1" />
+</module>
+<module>
+<name>MakeupManager</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="8" level="1" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="8" level="0" />
+<IF4_visible value="256" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="256" level="1" />
+</module>
+<module>
+<name>MakeupRequest</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="5" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="5" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>Person</name>
+<fan_out_visible value="5" level="0" />
+<fan_out_concrete value="5" level="0" />
+<fan_out value="5" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="1" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="25" level="0" />
+<IF4 value="25" level="0" />
+</module>
+<module>
+<name>Report</name>
+<fan_out_visible value="3" level="0" />
+<fan_out_concrete value="3" level="0" />
+<fan_out value="3" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="2" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="9" level="0" />
+<IF4 value="36" level="0" />
+</module>
+<module>
+<name>ReportManager</name>
+<fan_out_visible value="1" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="1" level="0" />
+<fan_in_visible value="5" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="5" level="0" />
+<IF4_visible value="25" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="25" level="0" />
+</module>
+<module>
+<name>Room</name>
+<fan_out_visible value="3" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="3" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="2" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="36" level="0" />
+</module>
+<module>
+<name>Schedule</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="2" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="2" level="0" />
+<IF4_visible value="16" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="16" level="0" />
+</module>
+<module>
+<name>ScheduleManager</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="64" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="64" level="0" />
+</module>
+<module>
+<name>SemesterLabReport</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="5" level="0" />
+<fan_in_concrete value="2" level="0" />
+<fan_in value="5" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>TA</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="64" level="0" />
+</module>
+<module>
+<name>TimeSheet</name>
+<fan_out_visible value="2" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="2" level="0" />
+<fan_in_visible value="3" level="0" />
+<fan_in_concrete value="1" level="0" />
+<fan_in value="3" level="0" />
+<IF4_visible value="36" level="1" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="36" level="0" />
+</module>
+<module>
+<name>TimeSheetManager</name>
+<fan_out_visible value="1" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="1" level="0" />
+<fan_in_visible value="5" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="5" level="0" />
+<IF4_visible value="25" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="25" level="0" />
+</module>
+<module>
+<name>WeeklyScheduleReport</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>WeeklyTimeSheetReport</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="4" level="0" />
+<fan_in_concrete value="3" level="0" />
+<fan_in value="4" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>anonymous</name>
+<fan_out_visible value="0" level="0" />
+<fan_out_concrete value="0" level="0" />
+<fan_out value="0" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>string</name>
+<fan_out_visible value="23" level="2" />
+<fan_out_concrete value="19" level="2" />
+<fan_out value="25" level="2" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+<module>
+<name>vector</name>
+<fan_out_visible value="3" level="0" />
+<fan_out_concrete value="9" level="1" />
+<fan_out value="9" level="0" />
+<fan_in_visible value="0" level="0" />
+<fan_in_concrete value="0" level="0" />
+<fan_in value="0" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4 value="0" level="0" />
+</module>
+</structural_summary>
+<other_extents>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="academicOfficer.cpp" line="1" />
+<lines_of_code value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="AcademicOfficerMenu.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="attendant.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="AttendantMenu.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="building.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="CountManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="DataManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="DateTime.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="headOfDep.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="HeadOfdepMenu.cpp" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="helper.cpp" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="instructor.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="InstructorMenu.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Lab.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="LabManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="LabSection.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="LabSession.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="main.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="makeupLabReq.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="MakeupManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Person.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="ReportManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Reports.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="room.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="schedule.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="ScheduleManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="SemesterLabReport.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="ta.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="timesheet.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="TimeSheetManager.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="WeeklyScheduleReport.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="WeeklyTimeSheetReport.cpp" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="academicOfficer.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="AcademicOfficerMenu.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="attendant.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="AttendantMenu.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="building.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="CountManager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="DataManager.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="DateTime.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="headOfDep.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="HeadOfdepMenu.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="helper.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="instructor.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="InstructorMenu.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Lab.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="LabManager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="LabSection.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="LabSession.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="makeupLabReq.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="MakeupManager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Person.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="ReportManager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="Reports.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="room.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="schedule.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="ScheduleManager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="SemesterLabReport.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="ta.h" line="1" />
+<lines_of_code value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="timesheet.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="TimeSheetManager.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="WeeklyScheduleReport.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+<rejected_extent>
+<name>&lt;file scope items&gt;</name>
+<source_reference file="WeeklyTimeSheetReport.h" line="1" />
+<lines_of_code value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+</rejected_extent>
+</other_extents>
+</CCCC_Project>

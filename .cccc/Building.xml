@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Building-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="70" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="0" level="0" />
+<lines_of_code_per_member_function value="********" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<weighted_methods_per_class_unity value="10" level="0" />
+<weighted_methods_per_class_visibility value="10" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+<IF4 value="64" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="36" level="1" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="building.h" line="9" />
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="room.h" line="4" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Building(const string &amp;,const string &amp;,const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addRoom(Room *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="33" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="23" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>displayInfo()</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="41" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="27" />
+</extent>
+<lines_of_code value="26" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAssignedRooms()</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="37" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="28" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getBuildingID()</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="9" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="20" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getBuildingLocation()</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="17" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="22" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getBuildingName()</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="13" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="21" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setAssignedAttendant(Attendant *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="29" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="26" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setBuildingLocation(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="25" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="25" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setBuildingName(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="building.cpp" line="21" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="building.h" line="24" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Building</name>
+<client_module>
+<name>Attendant</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="24" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="attendant.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="20" />
+</extent>
+<name>Room</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.cpp" line="36" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="room.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.h" line="23" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Attendant</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="29" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="building.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="26" />
+</extent>
+<name>Room</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="33" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="23" />
+</extent>
+<name>string</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="25" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="11" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="25" />
+</extent>
+<name>vector</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="15" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

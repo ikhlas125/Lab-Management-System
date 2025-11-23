@@ -1,0 +1,1616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module DataManager-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="1191" level="1" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="298" level="1" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="15" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="79.400" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="19.867" level="2" />
+<weighted_methods_per_class_unity value="72" level="0" />
+<weighted_methods_per_class_visibility value="72" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="12" level="0" />
+<IF4 value="729" level="1" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="324" level="2" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>declaration</description>
+<source_reference file="AcademicOfficerMenu.h" line="8" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="AttendantMenu.h" line="7" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>definition</description>
+<source_reference file="DataManager.h" line="22" />
+<lines_of_code value="21" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="HeadOfdepMenu.h" line="6" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="InstructorMenu.h" line="7" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="LabManager.h" line="8" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="MakeupManager.h" line="8" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="ReportManager.h" line="5" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="ScheduleManager.h" line="8" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="TimeSheetManager.h" line="5" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>getAcademicOfficers()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="974" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="86" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAttendants()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="970" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="85" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getBuildings()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="958" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="82" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getHeadOfDeps()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="978" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="87" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getInstructors()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="946" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="79" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLabSections()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="938" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="77" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLabSessions()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="942" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="78" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLabs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="934" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="76" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getMakeupRequests()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="982" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="88" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getPersons()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="954" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="81" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRooms()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="962" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="83" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getSchedules()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="966" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="84" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getSemesterLabReports()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="998" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="92" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getSessionsBySection(LabSection *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="800" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="73" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>getSessionsByWeekNumber(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="773" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="71" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getTAs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="950" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="80" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getTimeSheets()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="986" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="89" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getTimeSheetsBySection(LabSection *,const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="814" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="74" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>getTimeSheetsByWeekNumber(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="783" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="72" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>getWeeklyScheduleReports()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="990" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="90" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getWeeklyTimeSheetReports()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="994" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="91" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>loadAcademicOfficers()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="115" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="46" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="31.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadAttendants()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="152" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="47" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="31.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadBuildings()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="226" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="49" />
+</extent>
+<lines_of_code value="35" level="1" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="35.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.000" level="1" />
+</member_function>
+<member_function>
+<name>loadHeadofDep()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="189" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="48" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="31.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadInstructors()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="41" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="44" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="31.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadLabSchedules()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="429" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="53" />
+</extent>
+<lines_of_code value="45" level="1" />
+<McCabes_cyclomatic_complexity value="15" level="1" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="45.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="15.000" level="2" />
+</member_function>
+<member_function>
+<name>loadLabSections()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="343" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="52" />
+</extent>
+<lines_of_code value="78" level="1" />
+<McCabes_cyclomatic_complexity value="22" level="1" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="39.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="11.000" level="2" />
+</member_function>
+<member_function>
+<name>loadLabSessions()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="481" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="54" />
+</extent>
+<lines_of_code value="47" level="1" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="47.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="11.000" level="2" />
+</member_function>
+<member_function>
+<name>loadLabs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="308" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="51" />
+</extent>
+<lines_of_code value="29" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="29.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadMakeupRequests()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="538" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="55" />
+</extent>
+<lines_of_code value="59" level="1" />
+<McCabes_cyclomatic_complexity value="17" level="1" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="59.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="17.000" level="2" />
+</member_function>
+<member_function>
+<name>loadPersons()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="5" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="43" />
+</extent>
+<lines_of_code value="30" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="30.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadRooms()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="267" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="50" />
+</extent>
+<lines_of_code value="35" level="1" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="35.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.000" level="1" />
+</member_function>
+<member_function>
+<name>loadTAs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="78" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="45" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="31.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>loadTimeSheets()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="603" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="56" />
+</extent>
+<lines_of_code value="46" level="1" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="46.000" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="11.000" level="2" />
+</member_function>
+<member_function>
+<name>printAcademicOfficers()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="850" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="97" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printAttendants()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="856" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="98" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printBuildings()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="868" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="100" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printHeadofDep()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="862" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="99" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printInstructors()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="832" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="94" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printLabSchedules()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="892" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="104" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printLabSections()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="886" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="103" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printLabSessions()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="898" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="105" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printLabs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="880" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="102" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printMakeupRequests()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="904" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="106" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printPersons()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="838" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="95" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printRooms()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="874" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="101" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printSemesterLabReports()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="928" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="110" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printTAs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="844" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="96" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printTimeSheets()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="910" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="107" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printWeeklyScheduleReports()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="916" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="108" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>printWeeklyTimeSheetReports()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="922" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="109" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>saveLabSections()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1036" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="113" />
+</extent>
+<lines_of_code value="29" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>saveLabSessions()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1167" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="116" />
+</extent>
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>saveLabs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1002" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="112" />
+</extent>
+<lines_of_code value="26" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>saveMakeupRequests()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1204" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="117" />
+</extent>
+<lines_of_code value="66" level="1" />
+<McCabes_cyclomatic_complexity value="12" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>saveSchedules()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1110" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="115" />
+</extent>
+<lines_of_code value="50" level="1" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>saveSectionTAs()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1074" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="114" />
+</extent>
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+</member_function>
+<member_function>
+<name>saveTimeSheets()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="1283" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="118" />
+</extent>
+<lines_of_code value="32" level="1" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByBuildingID(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="719" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="61" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByHeadOfDepId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="683" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="65" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByID(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="728" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="58" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByIDAttendant(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="737" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="59" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByInstructorId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="665" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="63" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByLabId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="710" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="62" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByLabSessionId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="764" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="70" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByMakeupId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="755" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="69" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByPersonIdAttendant(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="746" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="60" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByRoomId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="692" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="67" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByScheduleId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="701" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="68" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchByTAId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="674" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="64" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>searchbyLabSectionId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DataManager.cpp" line="656" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DataManager.h" line="66" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>DataManager</name>
+<client_module>
+<name>AcademicOfficerMenu</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="AcademicOfficerMenu.cpp" line="9" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="AcademicOfficerMenu.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="AcademicOfficerMenu.h" line="19" />
+</extent>
+<name>AttendantMenu</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="AttendantMenu.cpp" line="7" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="AttendantMenu.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="AttendantMenu.h" line="16" />
+</extent>
+<name>HeadOfDepMenu</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="HeadOfdepMenu.cpp" line="8" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="HeadOfdepMenu.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="HeadOfdepMenu.h" line="14" />
+</extent>
+<name>InstructureMenu</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="InstructorMenu.cpp" line="8" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="InstructorMenu.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="InstructorMenu.h" line="17" />
+</extent>
+<name>LabManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="13" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="LabManager.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="24" />
+</extent>
+<name>MakeupManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="14" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="MakeupManager.h" line="17" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="23" />
+</extent>
+<name>ReportManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="11" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="ReportManager.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="16" />
+</extent>
+<name>ScheduleManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.cpp" line="10" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="ScheduleManager.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.h" line="18" />
+</extent>
+<name>TimeSheetManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="10" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="TimeSheetManager.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="16" />
+</extent>
+</client_module>
+<supplier_module>
+<name>LabSection</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="800" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="814" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="73" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="74" />
+</extent>
+<name>string</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="656" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="665" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="674" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="683" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="692" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="701" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="710" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="719" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="728" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="737" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="746" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="755" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="764" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="773" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="783" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="814" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="58" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="59" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="60" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="61" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="62" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="63" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="64" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="65" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="66" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="67" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="68" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="69" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="70" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="71" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="72" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="74" />
+</extent>
+<name>vector</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="24" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="25" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="26" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="27" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="28" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="29" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="30" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="31" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="32" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="33" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="34" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="35" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="36" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="37" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="38" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="39" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="DataManager.h" line="40" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

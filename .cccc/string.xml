@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module string-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="0" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="0" />
+<lines_of_code value="0" level="0" />
+<lines_of_code_per_member_function value="********" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<weighted_methods_per_class_unity value="0" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="25" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+</module_detail>
+<procedural_detail>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>string</name>
+<client_module>
+<name>AcademicOfficer</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.cpp" line="3" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="academicOfficer.h" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="academicOfficer.h" line="9" />
+</extent>
+<name>Attendant</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.cpp" line="20" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="attendant.h" line="10" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="attendant.h" line="19" />
+</extent>
+<name>Building</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.cpp" line="25" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="11" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="building.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="building.h" line="25" />
+</extent>
+<name>CountManager</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="CountManager.h" line="26" />
+</extent>
+<name>DataManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="656" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="665" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="674" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="683" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="692" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="701" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="710" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="719" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="728" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="737" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="746" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="755" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="764" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="773" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="783" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.cpp" line="814" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="58" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="59" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="60" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="61" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="62" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="63" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="64" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="65" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="66" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="67" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="68" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="69" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="70" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="71" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="72" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="DataManager.h" line="74" />
+</extent>
+<name>HeadOfDep</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.cpp" line="4" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="headOfDep.h" line="6" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.h" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="headOfDep.h" line="9" />
+</extent>
+<name>Instructor</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.cpp" line="4" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="instructor.h" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="instructor.h" line="11" />
+</extent>
+<name>Lab</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.cpp" line="38" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Lab.h" line="7" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Lab.h" line="8" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Lab.h" line="9" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Lab.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Lab.h" line="24" />
+</extent>
+<name>LabManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="72" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="72" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="29" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="29" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="31" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="31" />
+</extent>
+<name>LabSection</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="52" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="56" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.cpp" line="60" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSection.h" line="13" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSection.h" line="18" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSection.h" line="19" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSection.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSection.h" line="38" />
+</extent>
+<name>LabSession</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.cpp" line="56" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.cpp" line="60" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSession.h" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSession.h" line="17" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="LabSession.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.h" line="35" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabSession.h" line="36" />
+</extent>
+<name>MakeupManager</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="17" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="17" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="MakeupManager.cpp" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="51" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="25" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="25" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="MakeupManager.h" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="28" />
+</extent>
+<name>MakeupRequest</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="48" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="52" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="60" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="64" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="15" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="16" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="17" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="39" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="40" />
+</extent>
+<name>Person</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="34" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="7" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="8" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="9" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="10" />
+</extent>
+<name>Report</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Reports.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Reports.cpp" line="3" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Reports.h" line="9" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Reports.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Reports.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Reports.h" line="14" />
+</extent>
+<name>ReportManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="27" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="41" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="42" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="20" />
+</extent>
+<name>Room</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.cpp" line="28" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="room.h" line="7" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="room.h" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="room.h" line="21" />
+</extent>
+<name>Schedule</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.cpp" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.cpp" line="30" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="schedule.h" line="18" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="schedule.h" line="20" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="schedule.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.h" line="32" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="schedule.h" line="33" />
+</extent>
+<name>ScheduleManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.cpp" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.cpp" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.h" line="20" />
+</extent>
+<name>SemesterLabReport</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SemesterLabReport.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SemesterLabReport.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SemesterLabReport.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SemesterLabReport.h" line="18" />
+</extent>
+<name>TA</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.cpp" line="5" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="ta.h" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ta.h" line="12" />
+</extent>
+<name>TimeSheet</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="44" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="62" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="66" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.cpp" line="70" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="timesheet.h" line="11" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="timesheet.h" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="timesheet.h" line="13" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="timesheet.h" line="16" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="timesheet.h" line="17" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="timesheet.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="33" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="34" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="38" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="timesheet.h" line="39" />
+</extent>
+<name>TimeSheetManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="19" />
+</extent>
+<name>WeeklyScheduleReport</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.cpp" line="16" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="WeeklyScheduleReport.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyScheduleReport.h" line="20" />
+</extent>
+<name>WeeklyTimeSheetReport</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.cpp" line="16" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="WeeklyTimeSheetReport.h" line="11" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="WeeklyTimeSheetReport.h" line="20" />
+</extent>
+</client_module>
+<supplier_module>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

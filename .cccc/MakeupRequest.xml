@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module MakeupRequest-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="135" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="20" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="0" level="0" />
+<lines_of_code_per_member_function value="********" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<weighted_methods_per_class_unity value="18" level="0" />
+<weighted_methods_per_class_visibility value="18" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="makeupLabReq.h" line="10" />
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>MakeupRequest(const string &amp;,Instructor *,Day,const string &amp;,const string &amp;,const string &amp;,const string &amp;,LabSection *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>displayInfo()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="76" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="44" />
+</extent>
+<lines_of_code value="53" level="1" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>getMakeupSession()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="44" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="34" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getReason()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="32" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="31" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRequestId()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="12" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="26" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRequestedBy()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="16" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="27" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRequestedDay()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="20" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="28" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRequestedEndTime()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="28" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="30" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRequestedSection()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="40" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="33" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRequestedStartTime()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="24" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="29" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getStatus()</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="36" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="32" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMakeupSession(LabSession *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="72" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="42" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setReason(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="48" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="36" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setRequestedDay(Day)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="56" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="38" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setRequestedEndTime(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="64" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="40" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setRequestedSection(LabSection *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="68" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="41" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setRequestedStartTime(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="60" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="39" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setStatus(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="makeupLabReq.cpp" line="52" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="makeupLabReq.h" line="37" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>MakeupRequest</name>
+<client_module>
+</client_module>
+<supplier_module>
+<name>Day</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="makeupLabReq.cpp" line="56" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="14" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="makeupLabReq.h" line="38" />
+</extent>
+<name>Instructor</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="makeupLabReq.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<name>LabSection</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="68" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="makeupLabReq.h" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="41" />
+</extent>
+<name>LabSession</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="72" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="makeupLabReq.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="42" />
+</extent>
+<name>string</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="48" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="52" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="60" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.cpp" line="64" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="12" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="15" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="16" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="17" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="makeupLabReq.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="23" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="24" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="39" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="makeupLabReq.h" line="40" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

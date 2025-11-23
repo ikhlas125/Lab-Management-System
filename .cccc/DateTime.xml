@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module DateTime-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="156" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="41" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="22" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="7.091" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.864" level="0" />
+<weighted_methods_per_class_unity value="22" level="0" />
+<weighted_methods_per_class_visibility value="20" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="0" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="DateTime.h" line="6" />
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="timesheet.h" line="6" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>DateTime()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="7" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="20" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>DateTime(int,int,int,int,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="9" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="21" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addDays(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="126" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="42" />
+</extent>
+<lines_of_code value="20" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="20.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>calculateTimeDifference(const DateTime &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="93" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="41" />
+</extent>
+<lines_of_code value="23" level="0" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="7" level="0" />
+<lines_of_code_per_line_of_comment value="3.286" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.571" level="0" />
+</member_function>
+<member_function>
+<name>displayInfo()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="154" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="46" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getDay()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="19" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="26" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getDayOfWeek()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="71" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="40" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getDaysInMonth(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="62" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="16" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getHour()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="22" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="27" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getMinute()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="25" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="28" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getMonth()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="16" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="25" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getSecond()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="28" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="29" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getYear()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="13" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="24" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>isLeapYear(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="58" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="15" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setDay(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="40" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="34" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setHour(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="44" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="35" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMinute(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="48" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="36" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMonth(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="36" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="33" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setSecond(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="52" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="37" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setYear(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="33" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="32" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>subtractDays(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="149" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="43" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>toString()</name>
+<extent>
+<description>definition</description>
+<source_reference file="DateTime.cpp" line="160" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="DateTime.h" line="47" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>DateTime</name>
+<client_module>
+</client_module>
+<supplier_module>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

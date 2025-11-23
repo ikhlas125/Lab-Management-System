@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Person-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="49" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="0" level="0" />
+<lines_of_code_per_member_function value="********" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<weighted_methods_per_class_unity value="10" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="5" level="0" />
+<coupling_between_objects value="6" level="0" />
+<IF4 value="25" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="25" level="0" />
+<IF4_concrete_per_member_function value="********" level="2" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="Person.h" line="6" />
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Person(const string &amp;,const string &amp;,const string &amp;,const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>displayInfo()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="38" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getEmail()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="14" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getId()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="6" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getName()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="10" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getPhone()</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="18" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setEmail(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="30" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setId(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="26" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setName(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="22" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setPhone(const string &amp;)</name>
+<extent>
+<description>definition</description>
+<source_reference file="Person.cpp" line="34" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Person</name>
+<client_module>
+<name>AcademicOfficer</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="academicOfficer.h" line="4" />
+</extent>
+<name>Attendant</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="attendant.h" line="8" />
+</extent>
+<name>HeadOfDep</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="headOfDep.h" line="4" />
+</extent>
+<name>Instructor</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="instructor.h" line="5" />
+</extent>
+<name>TA</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="ta.h" line="6" />
+</extent>
+</client_module>
+<supplier_module>
+<name>string</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="26" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="30" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="Person.cpp" line="34" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="7" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="8" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="9" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="Person.h" line="10" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module CountManager-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="195" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="16" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="0" level="0" />
+<lines_of_code_per_member_function value="********" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+<weighted_methods_per_class_unity value="32" level="0" />
+<weighted_methods_per_class_visibility value="32" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+<IF4 value="25" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="CountManager.h" line="23" />
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="LabManager.h" line="9" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="MakeupManager.h" line="10" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="ReportManager.h" line="6" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="ScheduleManager.h" line="10" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<description>declaration</description>
+<source_reference file="TimeSheetManager.h" line="6" />
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>CountManager()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="3" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="29" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>displayCounts()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="169" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="65" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAcademicOfficerCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="83" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="45" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAttendantCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="79" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="44" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getBuildingCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="67" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="41" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getHeadOfDepCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="87" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="46" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getInstructorCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="55" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="38" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLabCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="43" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="35" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLabSectionCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="47" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="36" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLabSessionCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="51" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="37" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getMakeupRequestCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="91" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="47" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getPersonCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="63" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="40" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getRoomCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="71" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="42" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getScheduleCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="75" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="43" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getTACount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="59" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="39" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getTimesheetCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="95" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="48" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementAcademicOfficerCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="149" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="60" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementAttendantCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="144" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="59" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementBuildingCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="129" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="56" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementHeadOfDepCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="154" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="61" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementInstructorCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="114" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="53" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementLabCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="99" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="50" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementLabSectionCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="104" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="51" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementLabSessionCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="109" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="52" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementMakeupRequestCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="159" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="62" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementPersonCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="124" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="55" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementRoomCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="134" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="57" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementScheduleCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="139" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="58" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementTACount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="119" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="54" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>incrementTimesheetCount()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="164" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="63" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>loadCounts()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="22" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="31" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>saveCounts()</name>
+<extent>
+<description>definition</description>
+<source_reference file="CountManager.cpp" line="33" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="CountManager.h" line="33" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>CountManager</name>
+<client_module>
+<name>LabManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.cpp" line="13" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="LabManager.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="LabManager.h" line="24" />
+</extent>
+<name>MakeupManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.cpp" line="14" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="MakeupManager.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="MakeupManager.h" line="23" />
+</extent>
+<name>ReportManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.cpp" line="11" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="ReportManager.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ReportManager.h" line="16" />
+</extent>
+<name>ScheduleManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.cpp" line="10" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="ScheduleManager.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="ScheduleManager.h" line="18" />
+</extent>
+<name>TimeSheetManager</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.cpp" line="10" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="TimeSheetManager.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="TimeSheetManager.h" line="16" />
+</extent>
+</client_module>
+<supplier_module>
+<name>string</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="CountManager.h" line="26" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>
