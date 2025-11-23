@@ -2,6 +2,7 @@
 #include "AttendantMenu.h"
 #include "CountManager.h"
 #include "DataManager.h"
+#include "HeadOfdepMenu.h"
 #include "InstructorMenu.h"
 #include "LabManager.h"
 #include "MakeupManager.h"
@@ -35,8 +36,10 @@ int main() {
     // AttendantMenu am(&tm, &lm, &dm);
     // am.show();
     // aom.show();
-    InstructureMenu im(&lm, &dm, &mm);
-    im.show();
+    // InstructureMenu im(&lm, &dm, &mm);
+    // im.show();
+    HeadOfDepMenu hm(&rm, &dm);
+    hm.show();
     cout << "-------------------------------------------------------------------" << endl;
     dm.printInstructors();
     cout << "-------------------------------------------------------------------" << endl;
