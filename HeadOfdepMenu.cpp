@@ -58,7 +58,7 @@ void HeadOfDepMenu::show() {
                 cout << "Enter Section ID: ";
                 cin >> sectionId;
                 cin.ignore();
-                cout << "Enter semester (e.g., Fall 2025): ";
+                cout << "Enter semester (e.g., Fall 2025 space problem): ";
                 getline(cin, sem);
                 cout << "Enter date (e.g., 2025-11-24): ";
                 getline(cin, date);
