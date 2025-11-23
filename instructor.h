@@ -12,4 +12,6 @@ class Instructor : public Person {
     string getInstructorId() const;
     void addAssignedSection(LabSection* section);
     void displayInfo() const;
+    // Returns a reference to the vector of assigned sections
+    vector<LabSection*>& getAssignedSections();
 };

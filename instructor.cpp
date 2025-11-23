@@ -14,6 +14,10 @@ void Instructor::addAssignedSection(LabSection* section) {
     }
 }
 
+vector<LabSection*>& Instructor::getAssignedSections() {
+    return assignedSections;
+}
+
 void Instructor::displayInfo() const {
     cout << "Instructor Information:" << endl;
     cout << "Instructor Id: " << intructorId << endl;
